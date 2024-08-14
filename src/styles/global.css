@@ -1,0 +1,71 @@
+:root {
+  --color-primary: #1f3a93; /* Navy Blue */
+  --color-background: #f4f6f7; /* Soft White */
+  --color-accent: #f39c12; /* Bright Orange */
+  --color-text: #2c3e50; /* Dark Gray */
+}
+
+/* Global Styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-accent);
+}
+
+/* Additional Utility Classes */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-dark {
+  color: var(--color-text);
+}
+
+.text-background {
+  color: var(--color-background);
+}
