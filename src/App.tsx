@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import Navbar from "./components/Header";
+import SearchAndDropdown from "./components/SearchAndDropdown";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 
@@ -25,11 +27,14 @@ const App = () => {
     <Router>
       <div className={`min-h-screen ${darkMode ? "dark" : ""}`}>
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+
+        <div className="mt-12">
+          <SearchAndDropdown />
+        </div>
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            {/* Add other routes here */}
           </Routes>
         </main>
       </div>

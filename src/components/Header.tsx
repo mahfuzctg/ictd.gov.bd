@@ -1,112 +1,286 @@
-import {
-  Bars3Icon,
-  MoonIcon,
-  SunIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/images/banner/ictd-logo.png";
 
-const Navbar = () => {
-  const [menuVisible, setMenuVisible] = useState(true); // Menu visibility state
-  const [darkMode, setDarkMode] = useState(false); // Dark mode state
+const Navbar: React.FC = () => {
   const location = useLocation();
-  const navigate = useNavigate(); // Used for programmatic navigation
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(""); // Track which dropdown is open for mobile
 
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Affiliated Offices/Institutions", path: "/affiliated" },
-    { name: "Projects/Programme", path: "/projects" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Acts/Policy", path: "/acts" },
-    { name: "E-Service", path: "/service" },
-  ];
+  const isActive = (path: string) => location.pathname === path;
 
-  // Toggle function to show/hide the menu
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  // Toggle function for dark mode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark", !darkMode);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setOpenDropdown(""); // Close all dropdowns when the menu closes
   };
 
-  // Handle navigation and menu visibility
-  const handleNavigation = (path: string, event: React.MouseEvent) => {
-    event.preventDefault(); // Prevent default link behavior
-    navigate(path);
-    setMenuVisible(false); // Close menu when item is clicked
-    window.scrollTo(0, 0); // Ensure the scroll position is reset
+  const toggleDropdown = (dropdown: string) => {
+    setOpenDropdown(openDropdown === dropdown ? "" : dropdown); // Toggle specific dropdown
   };
-
-  useEffect(() => {
-    // Ensure that the scroll position is reset when navigating to a new route
-    window.scrollTo(0, 0);
-  }, [location]);
 
   return (
-    <nav
-      className={`bg-gray-800 text-white p-4 flex flex-col md:flex-row items-center md:justify-between relative ${
-        darkMode ? "dark" : ""
-      }`}
-    >
-      <div className="flex justify-between w-full md:w-auto items-center">
-        <Link
-          to="/"
-          className="text-2xl font-bold hover:text-orange-500 transition-colors duration-300"
-        >
-          ICTD
+    <nav className="fixed top-0 left-0 w-full bg-orange-600 text-white p-2 shadow-md z-50">
+      <div className="container mx-auto flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-1">
+          <img
+            src={logo}
+            alt="ICTD Logo"
+            className="w-10 h-10 object-contain rounded-full"
+          />
+          <span className="text-xl font-bold text-white">ICTD</span>
         </Link>
 
-        {/* Show the Bars3Icon when menu is hidden, XIcon when menu is visible */}
-        <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={toggleMenu}
-        >
-          {menuVisible ? (
-            <XMarkIcon className="h-6 w-6" />
-          ) : (
-            <Bars3Icon className="h-6 w-6" />
-          )}
-        </button>
+        {/* Desktop menu links */}
+        <div className="hidden md:flex space-x-4">
+          {/* Dropdown for About Us */}
+          <div className="relative group">
+            <button
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${
+                isActive("/about-us")
+                  ? "bg-white text-orange-600"
+                  : "text-white hover:bg-orange-500"
+              }`}
+            >
+              About Us
+            </button>
+            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+              <Link
+                to="/about-us/team"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Our Team
+              </Link>
+              <Link
+                to="/about-us/mission"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Our Mission
+              </Link>
+            </div>
+          </div>
+
+          {/* Dropdown for Affiliated Offices/Institutions */}
+          <div className="relative group">
+            <button
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${
+                isActive("/affiliated")
+                  ? "bg-white text-orange-600"
+                  : "text-white hover:bg-orange-500"
+              }`}
+            >
+              Affiliated Offices/Institutions
+            </button>
+            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+              <Link
+                to="/affiliated/office1"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Office 1
+              </Link>
+              <Link
+                to="/affiliated/office2"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Office 2
+              </Link>
+            </div>
+          </div>
+
+          {/* Dropdown for Projects/Programme */}
+          <div className="relative group">
+            <button
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${
+                isActive("/projects")
+                  ? "bg-white text-orange-600"
+                  : "text-white hover:bg-orange-500"
+              }`}
+            >
+              Projects/Programme
+            </button>
+            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+              <Link
+                to="/projects/programme1"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Programme 1
+              </Link>
+              <Link
+                to="/projects/programme2"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Programme 2
+              </Link>
+            </div>
+          </div>
+
+          {/* Dropdown for Gallery */}
+          <div className="relative group">
+            <button
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${
+                isActive("/gallery")
+                  ? "bg-white text-orange-600"
+                  : "text-white hover:bg-orange-500"
+              }`}
+            >
+              Gallery
+            </button>
+            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+              <Link
+                to="/gallery/photos"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Photos
+              </Link>
+              <Link
+                to="/gallery/videos"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Videos
+              </Link>
+            </div>
+          </div>
+
+          {/* Dropdown for Acts/Policy */}
+          <div className="relative group">
+            <button
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${
+                isActive("/acts-policy")
+                  ? "bg-white text-orange-600"
+                  : "text-white hover:bg-orange-500"
+              }`}
+            >
+              Acts/Policy
+            </button>
+            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+              <Link
+                to="/acts-policy/law1"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Law 1
+              </Link>
+              <Link
+                to="/acts-policy/law2"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Law 2
+              </Link>
+            </div>
+          </div>
+
+          {/* Dropdown for E-Services */}
+          <div className="relative group">
+            <button
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${
+                isActive("/e-services")
+                  ? "bg-white text-orange-600"
+                  : "text-white hover:bg-orange-500"
+              }`}
+            >
+              E-Services
+            </button>
+            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+              <Link
+                to="/e-services/service1"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Service 1
+              </Link>
+              <Link
+                to="/e-services/service2"
+                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+              >
+                Service 2
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden flex items-center">
+          <button className="" onClick={toggleMenu}>
+            {isMenuOpen ? "✕" : "☰"}
+          </button>
+        </div>
       </div>
 
-      {/* Menu Items */}
-      <ul
-        className={`${
-          menuVisible ? "translate-x-0" : "-translate-x-full"
-        } fixed top-0 left-0 bg-gray-800 text-white w-1/2 h-full md:static md:flex md:flex-row md:space-x-4 space-y-4 md:space-y-0 md:w-auto md:mt-0 transition-transform duration-300 ease-in-out`}
+      {/* Mobile menu links */}
+      <div
+        className={`fixed top-0 left-0 h-full bg-orange-500 text-white bg-opacity-100 p-4 transition-transform ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+        style={{ width: "60%" }}
       >
-        {navItems.map((item) => (
-          <li key={item.path} className="w-full md:w-auto">
-            <button
-              className={`block px-4 py-2 rounded transition-all duration-300 ${
-                location.pathname === item.path
-                  ? "bg-orange-500 text-gray-800"
-                  : "hover:bg-gray-700"
-              }`}
-              onClick={(event) => handleNavigation(item.path, event)}
-            >
-              {item.name}
-            </button>
-          </li>
-        ))}
-      </ul>
+        <button
+          className="absolute top-4 right-4 text-white text-2xl"
+          onClick={closeMenu}
+        >
+          &times;
+        </button>
 
-      {/* Theme Toggle Button */}
-      <button
-        className="text-white focus:outline-none ml-auto md:ml-0"
-        onClick={toggleDarkMode}
-      >
-        {darkMode ? (
-          <SunIcon className="h-6 w-6" />
-        ) : (
-          <MoonIcon className="h-6 w-6" />
-        )}
-      </button>
+        <div className="flex flex-col space-y-4 mt-12">
+          {/* Mobile Dropdowns for each section */}
+          {[
+            {
+              label: "About Us",
+              links: ["/about-us/team", "/about-us/mission"],
+            },
+            {
+              label: "Affiliated Offices/Institutions",
+              links: ["/affiliated/office1", "/affiliated/office2"],
+            },
+            {
+              label: "Projects/Programme",
+              links: ["/projects/programme1", "/projects/programme2"],
+            },
+            { label: "Gallery", links: ["/gallery/photos", "/gallery/videos"] },
+            {
+              label: "Acts/Policy",
+              links: ["/acts-policy/law1", "/acts-policy/law2"],
+            },
+            {
+              label: "E-Services",
+              links: ["/e-services/service1", "/e-services/service2"],
+            },
+          ].map((item, index) => (
+            <div key={index}>
+              <button
+                className={`px-3 py-2 rounded-xl text-sm font-medium ${
+                  openDropdown ===
+                    item.label.toLowerCase().replace(/\s/g, "-") ||
+                  isActive(item.links[0])
+                    ? "bg-white text-orange-600"
+                    : "text-white hover:bg-orange-500"
+                }`}
+                onClick={() =>
+                  toggleDropdown(item.label.toLowerCase().replace(/\s/g, "-"))
+                }
+              >
+                {item.label}
+              </button>
+              {openDropdown ===
+                item.label.toLowerCase().replace(/\s/g, "-") && (
+                <div className="ml-4">
+                  {item.links.map((link, idx) => (
+                    <Link
+                      key={idx}
+                      to={link}
+                      className="block px-4 py-2 text-sm text-white hover:bg-orange-600"
+                      onClick={closeMenu}
+                    >
+                      {link.split("/").pop()?.replace("-", " ")}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 };
