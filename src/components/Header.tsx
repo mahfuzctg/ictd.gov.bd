@@ -1,112 +1,72 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"; // Import icons
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar = () => {
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(true); // Default menu is open
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Affiliated Offices/Institutions", path: "/affiliated" },
+    { name: "Projects/Programme", path: "/projects" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Acts/Policy", path: "/acts" },
+    { name: "E-Service", path: "/service" },
+    { name: "Others", path: "/others" },
+  ];
 
   return (
-    <nav className="bg-primary text-background sticky top-0 z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-accent">
-              ICTD
-            </Link>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                to="/"
-                className="text-background hover:text-accent px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="text-background hover:text-accent px-3 py-2 rounded-md text-sm font-medium"
-              >
-                About
-              </Link>
-              <Link
-                to="/services"
-                className="text-background hover:text-accent px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Services
-              </Link>
-              <Link
-                to="/contact"
-                className="text-background hover:text-accent px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-          <div className="-mr-2 flex md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-background hover:text-accent hover:bg-primary focus:outline-none focus:bg-primary focus:text-accent"
+    <nav className="bg-gray-800 text-white p-4 flex flex-col md:flex-row items-center md:justify-between relative">
+      <div className="flex items-center justify-between w-full md:w-auto">
+        <Link
+          to="/"
+          className="text-2xl font-bold hover:text-orange-500 transition-colors duration-300"
+        >
+          ICTD
+        </Link>
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? (
+            <XMarkIcon className="h-6 w-6" />
+          ) : (
+            <Bars3Icon className="h-6 w-6" />
+          )}
+        </button>
+      </div>
+      <ul
+        className={`fixed inset-0 bg-gray-800 md:bg-transparent flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 transition-transform duration-300 transform ${
+          isOpen ? "translate-y-0" : "-translate-y-full"
+        } md:translate-y-0 md:relative md:flex md:items-center md:w-auto md:top-auto top-16 left-0 md:overflow-visible overflow-hidden`}
+      >
+        {navItems.map((item) => (
+          <li key={item.path} className="w-full md:w-auto">
+            <Link
+              to={item.path}
+              className={`block px-4 py-2 rounded transition-all duration-300 ${
+                location.pathname === item.path
+                  ? "bg-orange-500 text-gray-800"
+                  : "hover:bg-gray-700"
+              }`}
+              onClick={() => setIsOpen(false)} // Close menu when item is clicked
             >
-              <svg
-                className="h-6 w-6"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                {isOpen ? (
-                  <path
-                    className="block"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    className="block"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link
-            to="/"
-            className="text-background hover:text-accent block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="text-background hover:text-accent block px-3 py-2 rounded-md text-base font-medium"
-          >
-            About
-          </Link>
-          <Link
-            to="/services"
-            className="text-background hover:text-accent block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Services
-          </Link>
-          <Link
-            to="/contact"
-            className="text-background hover:text-accent block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Contact
-          </Link>
-        </div>
-      </div>
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      {/* Show Menu Button */}
+      {!isOpen && (
+        <button
+          className="md:hidden text-white absolute top-4 right-4"
+          onClick={() => setIsOpen(true)}
+        >
+          <Bars3Icon className="h-6 w-6" />
+        </button>
+      )}
     </nav>
   );
 };

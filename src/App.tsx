@@ -4,9 +4,7 @@ import Navbar from "./components/Header";
 const App = () => {
   return (
     <Router>
-      <div>
-        <Navbar />
-      </div>
+      <Navbar />
     </Router>
   );
 };
