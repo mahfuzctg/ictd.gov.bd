@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
-import {
-  default as footerImage,
-  default as logo,
-  default as mastercard,
-  default as paypal,
-  default as shopPay,
-  default as visa,
-} from "../assets/images/banner/ictd-logo.png";
+import footerImage from "../assets/images/banner/ictd-logo.png";
+import ictLogo1 from "../assets/logo/ict-logo-1.png";
+import ictLogo2 from "../assets/logo/ict-logo-2.png";
+import ictLogo3 from "../assets/logo/ict-logo-5.jpg";
+import ictLogo4 from "../assets/logo/ict-logo-6.png";
 
 const Footer = () => {
   return (
@@ -15,7 +12,7 @@ const Footer = () => {
         style={{
           backgroundImage: `url(${footerImage})`,
         }}
-        className="mt-28 bg-top bg-cover bg-no-repeat"
+        className="mt-24 bg-top bg-cover bg-no-repeat"
       >
         <div className="bg-black/85 h-full pt-8 px-8">
           <div className="max-w-7xl mx-auto px-3 lg:px-0">
@@ -24,7 +21,7 @@ const Footer = () => {
               {/* Subscribe */}
               <div className="space-y-2 flex-1">
                 <h3 className="font-semibold text-gray-200">
-                  SUBSCRIBE TO OUR NEWSLETTER
+                  SUBSCRIBE TO CONNECT WITH US
                 </h3>
                 <div className="flex w-full max-w-xl items-center space-x-2">
                   <input
@@ -33,7 +30,7 @@ const Footer = () => {
                     placeholder="Enter your email address..."
                   />
                   <button
-                    className="bg-orange-500 rounded-2xl text-white hover:bg-white hover:text-orange-500 w-36 p-2"
+                    className="bg-orange-600 rounded-2xl text-white hover:bg-white hover:text-orange-500 w-36 p-2"
                     type="submit"
                   >
                     SUBSCRIBE
@@ -119,15 +116,15 @@ const Footer = () => {
             <div className="py-10 flex flex-col md:flex-row justify-between items-center">
               {/* Logo */}
               <Link to="/">
-                <img src={logo} className="h-20" alt="Footer Logo" />
+                <img src={footerImage} className="h-20" alt="Footer Logo" />
               </Link>
 
               {/* Payment */}
               <div className="flex gap-8 py-6 md:py-0">
-                <img src={visa} alt="Visa" className="h-10" />
-                <img src={mastercard} alt="MasterCard" className="h-10" />
-                <img src={paypal} alt="PayPal" className="h-10" />
-                <img src={shopPay} alt="Shop Pay" className="h-10" />
+                <img src={ictLogo1} alt="Visa" className="h-10 w-12 " />
+                <img src={ictLogo2} alt="Visa" className="h-10 w-12 " />
+                <img src={ictLogo3} alt="Visa" className="h-10 w-12 " />
+                <img src={ictLogo4} alt="Visa" className="h-10 w-12 " />
               </div>
 
               {/* Copyright */}
