@@ -1,4 +1,5 @@
 import CardGrid from "./CardGrid";
+import ContactUsAndMap from "./ContactUsAndMap";
 import SingleCardSection from "./singleCardSection";
 
 const HomePage = () => {
@@ -32,6 +33,7 @@ const HomePage = () => {
       </div>
       <SingleCardSection></SingleCardSection>
       <CardGrid></CardGrid>
+      <ContactUsAndMap></ContactUsAndMap>
     </>
   );
 };

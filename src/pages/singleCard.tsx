@@ -17,15 +17,15 @@ const SingleCard: React.FC<CardProps> = ({ icon, title, textItems }) => {
 
   return (
     <div
-      className={`bg-[#ffffff] p-4 rounded-lg transform transition-transform hover:scale-105 duration-300 ease-in-out flex flex-col md:flex-row`}
+      className={`bg-[#ffffff] p-4 rounded-lg transform transition-transform  duration-300 ease-in-out flex flex-col md:flex-row`}
       style={{ width: "100%" }}
     >
       {/* Icon on the left */}
-      <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-center mb-4 md:mb-0">
+      <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-end md:justify-start mb-4 md:mb-0">
         <img
           src={icon}
           alt="Icon"
-          className="w-[80%] h-auto md:w-[60%] md:h-[60%]  shadow-md object-cover"
+          className="w-[80%] h-auto md:w-[70%] md:h-[70%]  "
         />
       </div>
 

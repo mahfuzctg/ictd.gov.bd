@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
+import Footer from "./components/Footer";
 import Navbar from "./components/Header";
 import SearchAndDropdown from "./components/SearchAndDropdown";
 import AboutPage from "./pages/AboutPage";
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/about" element={<AboutPage />} />
           </Routes>
         </main>
+        <Footer></Footer>
       </div>
     </Router>
   );

@@ -1,12 +1,12 @@
 import React from "react";
 import "../styles/Card.css";
-import SingleCard from "./SingleCard";
+import SingleCard from "./singleCard";
 
 const SingleCardSection: React.FC = () => {
   // Sample data for a single card
   const cardData = {
-    icon: "https://i.postimg.cc/wMHjZGtH/bangladesh-independence-day-soldier-illustration-vector.jpg",
-    title: "নোটিশ বোর্ড",
+    icon: "https://i.postimg.cc/26V0gh9S/ict-icon-5.png",
+    title: "Notice Board",
     textItems: [
       "প্রজ্ঞাপন (স্মারক-৬৮, চাকরি স্থায়ীকরণ, প্রোগ্রামার ও সহকারী প্রোগ্রামার, তথ্য ও যোগায...",
       "অফিস আদেশ (দায়িত্ব বণ্টন)",
