@@ -1,71 +1,29 @@
-:root {
-  --color-primary: #1f3a93; /* Navy Blue */
-  --color-background: #e2eafc; /* Soft White */
-  --color-accent: #f39c12; /* Bright Orange */
-  --color-text: #2c3e50; /* Dark Gray */
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-/* Global Styles */
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--color-primary);
+.animate-bottomToTop {
+  animation: bottomToTop 2s ease-in-out infinite alternate;
 }
 
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-primary);
-}
-
-button {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: var(--color-accent);
-}
-
-/* Additional Utility Classes */
-.bg-primary {
-  background-color: var(--color-primary);
-}
-
-.bg-accent {
-  background-color: var(--color-accent);
-}
-
-.text-primary {
-  color: var(--color-primary);
-}
-
-.text-accent {
-  color: var(--color-accent);
-}
-
-.text-dark {
-  color: var(--color-text);
-}
-
-.text-background {
-  color: var(--color-background);
+.animate-leftToRight {
+  animation: leftToRight 2s ease-in-out infinite alternate;
 }

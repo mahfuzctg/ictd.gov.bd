@@ -15,43 +15,50 @@ const SearchAndDropdown: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-4 shadow-md">
-      <div className="container mx-auto flex flex-col md:flex-row">
+    <div className="bg-[#ffffff] p-4 shadow-md">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Main Search Bar */}
         <form
           onSubmit={handleSearch}
-          className="flex items-center flex-grow mb-4 md:mb-0 md:mr-2 w-full md:w-1/2"
+          className="flex items-center flex-grow mb-4 md:mb-0 md:mr-2 w-full md:w-1/4"
         >
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search..."
-            className="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 flex-grow"
+            className="px-2 py-1 bg-[#ffffff] border border-orange-500 text-sm rounded-l-md focus:outline-none focus:ring-1 focus:ring-orange-500 flex-grow"
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-orange-500 text-white rounded-r-md hover:bg-orange-600"
+            className="px-5 mx-1 py-1 text-sm bg-[#ffffff] border border-orange-500  text-orange-500 rounded-r-md hover:bg-orange-600 hover:text-[#ffffff]"
           >
             Search
           </button>
         </form>
 
+        {/* Title - Centered */}
+        <div className="w-full text-center mb-4 md:mb-0">
+          <span className="text-xl font-semibold text-gray-600">
+            <span className="text-orange-600"> BANGLADESH</span> NATIONAL PORTAL
+          </span>
+        </div>
+
         {/* Dropdown for Extra Search */}
-        <div className="relative w-full md:w-1/2">
+        <div className="relative w-full md:w-1/4 mb-4 md:mb-0">
           <select
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 w-full"
+            className="px-4 py-1 border border-orange-500 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 w-[100%]"
           >
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
-            <option value="Option 4">Option 4</option>
-            <option value="Option 5">Option 5</option>
-            <option value="Option 6">Option 6</option>
-            <option value="Option 7">Option 7</option>
-            <option value="Option 8">Option 8</option>
+            <option value="Option 1">E-Governance</option>
+            <option value="Option 2">Innovation</option>
+            <option value="Option 3">Training</option>
+            <option value="Option 4">Infrastructure</option>
+            <option value="Option 5">Partnerships</option>
+            <option value="Option 6">Cybersecurity</option>
+            <option value="Option 7">Sustainability</option>
+            <option value="Option 8">Green Technology</option>
           </select>
         </div>
       </div>

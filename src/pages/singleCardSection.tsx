@@ -8,11 +8,11 @@ const SingleCardSection: React.FC = () => {
     icon: "https://i.postimg.cc/26V0gh9S/ict-icon-5.png",
     title: "Notice Board",
     textItems: [
-      "প্রজ্ঞাপন (স্মারক-৬৮, চাকরি স্থায়ীকরণ, প্রোগ্রামার ও সহকারী প্রোগ্রামার, তথ্য ও যোগায...",
-      "অফিস আদেশ (দায়িত্ব বণ্টন)",
-      "২০২৪-২০২৫ অর্থবছরের বিজ্ঞপ্তি",
-      "e-Tender For “Procurement of Food and Refreshment for Aspire to Innovate (a2i) Progr...",
-      "অফিস আদেশ (অবমুক্তি, জনাব মির্জা মুরাদ হাসান বেগ, উপ-পরিচালক))",
+      "Notification (Memo-68, Job Confirmation, Programmer and Assistant Programmer, Information & Communication...",
+      "Office Order (Duty Allocation)",
+      "Notification for the Fiscal Year 2024-2025",
+      "e-Tender for Procurement of Food and Refreshment for Aspire to Innovate (a2i) Program...",
+      "Office Order (Release of Mr. Mirza Murad Hasan Beg, Deputy Director)",
     ],
   };
 
