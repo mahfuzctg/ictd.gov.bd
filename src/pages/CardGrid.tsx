@@ -269,9 +269,9 @@ const rightSectionData = [
 
 const CardGrid: React.FC = () => {
   return (
-    <div className="mx-auto p-8 flex flex-col lg:flex-row">
+    <div className="mx-auto p-4 flex flex-col lg:flex-row">
       {/* Left section - Card grid (70% width) */}
-      <div className="w-full lg:w-[80%] grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="w-full  grid grid-cols-1 md:grid-cols-3 gap-2">
         {cardData.map((data, index) => (
           <Card
             key={index}

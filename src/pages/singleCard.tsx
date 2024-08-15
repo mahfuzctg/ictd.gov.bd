@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Card.css";
 
 interface CardProps {
@@ -8,16 +8,9 @@ interface CardProps {
 }
 
 const SingleCard: React.FC<CardProps> = ({ icon, title, textItems }) => {
-  const [showMore, setShowMore] = useState(false);
-
-  // Toggle function for showing/hiding full text
-  const handleReadMore = () => {
-    setShowMore(!showMore);
-  };
-
   return (
     <div
-      className={`bg-[#ffffff] p-4 rounded-lg transform transition-transform  duration-300 ease-in-out flex flex-col md:flex-row`}
+      className={`bg-[#ffffff] p-4 rounded-lg transform transition-transform duration-300 ease-in-out flex flex-col md:flex-row`}
       style={{ width: "100%" }}
     >
       {/* Icon on the left */}
@@ -25,7 +18,7 @@ const SingleCard: React.FC<CardProps> = ({ icon, title, textItems }) => {
         <img
           src={icon}
           alt="Icon"
-          className="w-[80%] h-auto md:w-[70%] md:h-[70%]  "
+          className="w-[80%] h-auto md:w-[70%] md:h-[70%]"
         />
       </div>
 
@@ -39,35 +32,21 @@ const SingleCard: React.FC<CardProps> = ({ icon, title, textItems }) => {
         {/* Container for the list */}
         <div className="relative flex flex-col flex-grow">
           {/* Vertical line */}
-          <div className="absolute top-0 left-0 h-full w-[4px] bg-orange-500" />
+          <div className="absolute top-0 left-0 h-[70%] w-[4px] bg-orange-500" />
 
           {/* List items */}
-          <div
-            className={`pl-8 text-sm text-left flex flex-col flex-grow overflow-hidden transition-all duration-300 ease-in-out ${
-              showMore ? "max-h-[1000px]" : "max-h-[150px]"
-            }`}
-            style={{ transition: "max-height 0.3s ease-in-out" }}
-          >
-            {textItems
-              .slice(0, showMore ? textItems.length : 3)
-              .map((text, index) => (
-                <div key={index} className="mb-2 flex items-start">
-                  <span className="block text-justify">{text}</span>
-                </div>
-              ))}
+          <div className="pl-8 text-sm text-left flex flex-col flex-grow">
+            {textItems.map((text, index) => (
+              <div key={index} className="mb-2 flex items-start">
+                <a
+                  href={`#link-${index}`}
+                  className="block text-justify hover:text-orange-700 transition-colors duration-300 ease-in-out"
+                >
+                  {text}
+                </a>
+              </div>
+            ))}
           </div>
-        </div>
-
-        {/* Read More button */}
-        <div className="flex justify-center mt-4">
-          <button
-            className="px-4 py-2 bg-white text-gray-800 rounded-md hover:bg-pink-50 shadow-md transition-colors duration-300 ease-in-out"
-            onClick={handleReadMore}
-          >
-            <span className="text-sm font-roboto font-bold text-gray-500">
-              {showMore ? "Show less" : "Read more"}
-            </span>
-          </button>
         </div>
       </div>
     </div>
