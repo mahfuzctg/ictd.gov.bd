@@ -1,4 +1,5 @@
 import CardGrid from "./CardGrid";
+import SingleCardSection from "./singleCardSection";
 
 const HomePage = () => {
   return (
@@ -29,7 +30,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-
+      <SingleCardSection></SingleCardSection>
       <CardGrid></CardGrid>
     </>
   );
