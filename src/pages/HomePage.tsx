@@ -1,6 +1,7 @@
 import CardGrid from "./CardGrid";
 import ContactUsAndMap from "./ContactUsAndMap";
 import SingleCardSection from "./singleCardSection";
+import VideoSection from "./VideoSection";
 
 const HomePage = () => {
   return (
@@ -36,6 +37,7 @@ const HomePage = () => {
       <>
         <CardGrid></CardGrid>
       </>
+      <VideoSection></VideoSection>
       <ContactUsAndMap></ContactUsAndMap>
     </>
   );
