@@ -1,4 +1,4 @@
-import { FaCheck } from "react-icons/fa"; // Import check mark icon from react-icons
+import { FaRegCheckCircle } from "react-icons/fa";
 
 const InfoSection = () => {
   return (
@@ -44,27 +44,27 @@ const InfoSection = () => {
           <ul className="list-disc pl-5 space-y-2">
             <h6 className="text-center font-bold">Internal E-Services</h6>
             <li className="flex items-center">
-              <FaCheck className="mr-2 text-green-600" />
+              <FaRegCheckCircle className="mr-2 text-green-600" />
               Web Mail
             </li>
             <li className="flex items-center">
-              <FaCheck className="mr-2 text-green-600" />
+              <FaRegCheckCircle className="mr-2 text-green-600" />
               Scholarships & ICT Grants
             </li>
             <li className="flex items-center">
-              <FaCheck className="mr-2 text-green-600" />
+              <FaRegCheckCircle className="mr-2 text-green-600" />
               National Enterprise Architecture
             </li>
             <li className="flex items-center">
-              <FaCheck className="mr-2 text-green-600" />
+              <FaRegCheckCircle className="mr-2 text-green-600" />
               CIRT
             </li>
             <li className="flex items-center">
-              <FaCheck className="mr-2 text-green-600" />
+              <FaRegCheckCircle className="mr-2 text-green-600" />
               Online Recruitment System
             </li>
             <li className="flex items-center">
-              <FaCheck className="mr-2 text-green-600" />
+              <FaRegCheckCircle className="mr-2 text-green-600" />
               One Stop Service (Bangladesh Hi-Tech Park)
             </li>
           </ul>
@@ -78,27 +78,27 @@ const InfoSection = () => {
             {/* List Texts */}
             <ul className="list-disc pl-5 space-y-2">
               <li className="flex items-center">
-                <FaCheck className="mr-2 text-green-600" />
+                <FaRegCheckCircle className="mr-2 text-green-600" />
                 Office of the President
               </li>
               <li className="flex items-center">
-                <FaCheck className="mr-2 text-green-600" />
+                <FaRegCheckCircle className="mr-2 text-green-600" />
                 Office of the Prime Minister
               </li>
               <li className="flex items-center">
-                <FaCheck className="mr-2 text-green-600" />
+                <FaRegCheckCircle className="mr-2 text-green-600" />
                 Cabinet Division
               </li>
               <li className="flex items-center">
-                <FaCheck className="mr-2 text-green-600" />
+                <FaRegCheckCircle className="mr-2 text-green-600" />
                 Bangladesh Employees Welfare Board
               </li>
               <li className="flex items-center">
-                <FaCheck className="mr-2 text-green-600" />
+                <FaRegCheckCircle className="mr-2 text-green-600" />
                 National Skill Development Authority
               </li>
               <li className="flex items-center">
-                <FaCheck className="mr-2 text-green-600" />
+                <FaRegCheckCircle className="mr-2 text-green-600" />
                 Primary Digital Content
               </li>
             </ul>
