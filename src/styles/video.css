@@ -1,0 +1,19 @@
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scrolling-grid {
+  display: flex;
+  width: 200%; /* This width allows seamless looping */
+  animation: scrollLeftToRight 20s linear infinite;
+}
+
+@keyframes scrollLeftToRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

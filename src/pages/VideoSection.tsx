@@ -1,41 +1,60 @@
 import React from "react";
-
+import "../styles/video.css";
 const VideoSection: React.FC = () => {
   return (
-    <section className="p-5">
+    <section className="p-5 overflow-hidden">
       {/* Video Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Video 1 */}
-        <div className="relative w-full h-64 md:h-80 lg:h-96">
-          <iframe
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/GT9ShGE_qjg?autoplay=1&mute=1&loop=1&playlist=GT9ShGE_qjg"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="Video 1"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-            <h2 className="text-white text-xl md:text-2xl font-semibold">
-              Your Video Title 1
-            </h2>
+      <h1 className="text-center font-bold text-orange-600 py-8 md:text-xl">
+        Start Watching: Exclusive Video Content
+      </h1>
+      <div className="scroll-container">
+        <div className="scrolling-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Video 1 */}
+          <div className="relative w-full h-64 md:h-80 lg:h-96">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/GT9ShGE_qjg?autoplay=1&mute=1&loop=1&playlist=GT9ShGE_qjg"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Video 1"
+            />
           </div>
-        </div>
 
-        {/* Video 2 */}
-        <div className="relative w-full h-64 md:h-80 lg:h-96">
-          <iframe
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/GT9ShGE_qjg?autoplay=1&mute=1&loop=1&playlist=GT9ShGE_qjg"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="Video 2"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-            <h2 className="text-white text-xl md:text-2xl font-semibold">
-              Your Video Title 2
-            </h2>
+          {/* Video 2 */}
+          <div className="relative w-full h-64 md:h-80 lg:h-96">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/fXuQNttSyJ4?autoplay=1&mute=1&loop=1&playlist=fXuQNttSyJ4"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Video 2"
+            />
+          </div>
+
+          {/* Video 3 */}
+          <div className="relative w-full h-64 md:h-80 lg:h-96">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/LbOxr7Z3BrI?autoplay=1&mute=1&loop=1&playlist=LbOxr7Z3BrI"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Video 3"
+            />
+          </div>
+
+          {/* Video 4 */}
+          <div className="relative w-full h-64 md:h-80 lg:h-96">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/msZPEriDAdQ?autoplay=1&mute=1&loop=1&playlist=msZPEriDAdQ"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Video 4"
+            />
           </div>
         </div>
       </div>
