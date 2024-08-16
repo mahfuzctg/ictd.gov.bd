@@ -248,7 +248,7 @@ const cardData = [
   },
 ];
 
-// Data for the new right section (3 cards)
+// Data for the new right section (2 cards)
 const rightSectionData = [
   {
     icon: "https://i.postimg.cc/k42hF11M/Honorable-Adviser-1.jpg",
@@ -262,11 +262,33 @@ const rightSectionData = [
   },
 ];
 
+// Hotline section data
+const hotlineData = [
+  { icon: "https://i.postimg.cc/Qx1R74Ck/333.png" },
+  { icon: "https://i.postimg.cc/3xZVSkgk/999.png" },
+  { icon: "https://i.postimg.cc/3J5q3X1y/download.png" },
+  { icon: "https://i.postimg.cc/3J5q3X1y/download.png" },
+  { icon: "https://i.postimg.cc/sg30h3ts/download.png" },
+  { icon: "https://i.postimg.cc/8C0y9Msz/download.png" },
+  { icon: "https://i.postimg.cc/fy48Tsc4/download.png" },
+  { icon: "https://i.postimg.cc/mZMdpc4T/download.png" },
+  { icon: "https://i.postimg.cc/ncG3Z6M5/download.png" },
+  { icon: "https://i.postimg.cc/QdN0M0TM/download.png" },
+  { icon: "https://i.postimg.cc/mgdV1CYy/download.png" },
+  { icon: "https://i.postimg.cc/YShR608K/download.png" },
+  { icon: "https://i.postimg.cc/zf6j0NPL/download.png" },
+  { icon: "https://i.postimg.cc/1XcrmqR6/download.png" },
+  { icon: "https://i.postimg.cc/tCkN8WMG/download.png" },
+  { icon: "https://i.postimg.cc/YCSz705G/download.png" },
+  { icon: "https://i.postimg.cc/52kq21JP/download.png" },
+  // More hotline data...
+];
+
 const CardGrid: React.FC = () => {
   return (
-    <div className="mx-auto p-4 flex flex-col lg:flex-row">
+    <div className="mx-auto  flex flex-col lg:flex-row">
       {/* Left section - Card grid (70% width) */}
-      <div className="w-full  grid grid-cols-1 md:grid-cols-3 gap-2">
+      <div className="w-full lg:w-[80%] h-[100%] mx-auto  grid grid-cols-1 md:grid-cols-3 text-sm gap-2">
         {cardData.map((data, index) => (
           <Card
             key={index}
@@ -277,25 +299,46 @@ const CardGrid: React.FC = () => {
         ))}
       </div>
 
-      {/* Right section - 30% width with animated scrolling */}
-      <div className="w-full lg:w-[20%] h-96 overflow-hidden relative">
-        <div className="w-full h-full flex flex-col animate-scrollBottomToTop">
-          {rightSectionData.map((data, index) => (
-            <div
-              key={index}
-              className="bg-white p-4 rounded-lg shadow-md mb-4 flex-none"
-            >
-              <img
-                src={data.icon}
-                alt={data.title}
-                className="w-[50%] h-[50%] mx-auto  mb-4 bg-green-500 p-1 rounded-full"
-              />
-              <h3 className="text-lg text-center font-semibold mb-2">
-                {data.title}
-              </h3>
-              <p className="text-sm text-gray-600 text-center">{data.text}</p>
-            </div>
-          ))}
+      {/* Right section and Hotline Section - 30% width */}
+      <div className="w-full p-4 mx-auto lg:w-[20%]  flex flex-col space-y-4">
+        {/* Right Section */}
+        <div className="w-full h-96 overflow-hidden relative">
+          <div className="w-full h-full flex flex-col animate-scrollBottomToTop">
+            {rightSectionData.map((data, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 rounded-lg shadow-md mb-4 flex-none"
+              >
+                <img
+                  src={data.icon}
+                  alt={data.title}
+                  className="w-[50%] h-[50%] mx-auto mb-4 bg-green-500 p-1 rounded-full"
+                />
+                <h3 className="text-lg text-center font-semibold mb-2">
+                  {data.title}
+                </h3>
+                <p className="text-sm text-gray-600 text-center">{data.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Hotline Section */}
+        <div className="w-full h-[95%] overflow-hidden">
+          <h2 className="text-center font-bold text-gray-800 py-4 text-xl">
+            Emergency Hotline
+          </h2>
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1  ">
+            {hotlineData.map((data, index) => (
+              <div key={index} className="  rounded-lg  ">
+                <img
+                  src={data.icon}
+                  alt={`Hotline ${index + 1}`}
+                  className="w-full"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
