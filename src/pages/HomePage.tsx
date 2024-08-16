@@ -17,9 +17,9 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <div className="">
       {/* New Section */}
-      <section className="w-full bg-white p-4 sm:p-8 md:p-12">
+      <section className="w-full mx-auto text-center  p-4 md:p-12">
         <div className="flex flex-col md:flex-row md:space-x-4">
           {/* First Div: Title and Text */}
           <div className="w-full md:w-1/2 flex flex-col uppercase justify-center items-start p-4">
@@ -110,7 +110,7 @@ const HomePage = () => {
       <InfoSection />
       <VideoSection />
       <ContactUsAndMap />
-    </>
+    </div>
   );
 };
 

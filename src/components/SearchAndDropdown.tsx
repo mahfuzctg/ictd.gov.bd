@@ -16,11 +16,11 @@ const SearchAndDropdown: React.FC = () => {
 
   return (
     <div className="bg-[#ffffff] p-4 shadow-md">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
         {/* Main Search Bar */}
         <form
           onSubmit={handleSearch}
-          className="flex items-center flex-grow mb-4 md:mb-0 md:mr-2 w-full md:w-1/4"
+          className="flex items-center w-full md:w-1/4"
         >
           <input
             type="text"
@@ -38,18 +38,18 @@ const SearchAndDropdown: React.FC = () => {
         </form>
 
         {/* Title - Centered */}
-        <div className="w-full text-center mb-4 md:mb-0">
+        <div className="text-center md:w-1/2">
           <span className="text-xl font-semibold text-gray-600">
-            <span className="text-green-700"> BANGLADESH</span> NATIONAL PORTAL
+            <span className="text-green-700">BANGLADESH</span> NATIONAL PORTAL
           </span>
         </div>
 
         {/* Dropdown for Extra Search */}
-        <div className="relative w-full md:w-1/4 mb-4 md:mb-0">
+        <div className="w-full md:w-1/4">
           <select
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
-            className="px-4 py-1 border border-green-700 rounded-md focus:outline-none focus:ring-1 focus:ring-green-600 w-[100%]"
+            className="w-full px-4 py-1 border border-green-700 rounded-md focus:outline-none focus:ring-1 focus:ring-green-600"
           >
             <option value="Option 1">E-Governance</option>
             <option value="Option 2">Innovation</option>

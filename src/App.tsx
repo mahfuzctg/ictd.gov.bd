@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage";
 const App = () => {
   return (
     <Router>
-      <div className={`min-h-screen `}>
+      <>
         <Navbar />
 
         <div className="mt-12">
@@ -23,7 +23,7 @@ const App = () => {
           </Routes>
         </main>
         <Footer></Footer>
-      </div>
+      </>
     </Router>
   );
 };

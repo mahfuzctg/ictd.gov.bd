@@ -16,6 +16,8 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  margin: 0 auto;
+  padding: 0;
 }
 
 /* Example custom component styling */
