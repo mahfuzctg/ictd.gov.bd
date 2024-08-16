@@ -392,7 +392,7 @@ const CardGrid: React.FC = () => {
                 <img
                   src={data.icon}
                   alt={data.title}
-                  className="w-[50%] h-[50%] mx-auto mb-4 bg-green-500 p-1 rounded-full"
+                  className="w-[50%] h-[50%] mx-auto mb-4 bg-green-700 p-1 rounded-full"
                 />
                 <h3 className="text-lg text-center font-semibold mb-2">
                   {data.title}

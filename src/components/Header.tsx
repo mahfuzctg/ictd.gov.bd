@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             >
               About Us
             </button>
-            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/about-us/team"
                 className="block px-4 py-2 text-sm hover:text-red-600"
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             >
               Affiliated Offices/Institutions
             </button>
-            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/affiliated/office1"
                 className="block px-4 py-2 text-sm hover:text-red-600"
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
             >
               Projects/Programme
             </button>
-            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/projects/programme1"
                 className="block px-4 py-2 text-sm hover:text-red-600"
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
             >
               Gallery
             </button>
-            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/gallery/photos"
                 className="block px-4 py-2 text-sm hover:text-red-600"
@@ -146,7 +146,7 @@ const Navbar: React.FC = () => {
             >
               Acts/Policy
             </button>
-            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/acts-policy/law1"
                 className="block px-4 py-2 text-sm hover:text-red-600"
@@ -171,7 +171,7 @@ const Navbar: React.FC = () => {
             >
               E-Services
             </button>
-            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/e-services/service1"
                 className="block px-4 py-2 text-sm hover:text-red-600"
@@ -198,7 +198,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu links */}
       <div
-        className={`fixed top-0 left-0 h-full bg-green-600 text-white p-4 transition-transform ${
+        className={`fixed top-0 left-0 h-full bg-green-800 text-white p-4 transition-transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         style={{ width: "60%" }}

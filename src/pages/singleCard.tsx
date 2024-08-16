@@ -1,10 +1,8 @@
 import React from "react";
 import { HiExternalLink } from "react-icons/hi";
-import { MdOutlineEditNotifications } from "react-icons/md";
 import "../styles/Card.css";
 
 interface CardProps {
-  icon: string;
   title: string;
   textItems: string[];
 }
@@ -15,9 +13,13 @@ const SingleCard: React.FC<CardProps> = ({ title, textItems }) => {
       className={`bg-[#ffffff] p-4 rounded-lg transform transition-transform duration-300 ease-in-out flex flex-col md:flex-row`}
       style={{ width: "100%" }}
     >
-      {/* Icon on the left */}
+      {/* Image on the left */}
       <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-end md:justify-start mb-4 md:mb-0">
-        <MdOutlineEditNotifications className="w-[80%] h-auto md:w-[70%] md:h-[70%] text-gray-600" />
+        <img
+          src="https://i.postimg.cc/3rbp1sFH/21dc206bc3eaac6fb73eacff95404872-414021416411-1-26786-28519.jpg"
+          alt="Card Icon"
+          className="mx-auto h-auto md:w-[350px] md:h-[350px] object-contain "
+        />
       </div>
 
       {/* Content on the right */}
@@ -33,7 +35,7 @@ const SingleCard: React.FC<CardProps> = ({ title, textItems }) => {
           <div className="pl-8 text-sm text-left flex flex-col flex-grow">
             {textItems.map((text, index) => (
               <div key={index} className="mb-2 flex items-start">
-                <HiExternalLink className="text-green-600 mr-2" />
+                <HiExternalLink className="text-green-700 mr-2" />
                 <a
                   href={`#link-${index}`}
                   className="block text-justify hover:text-green-700 transition-colors duration-300 ease-in-out"

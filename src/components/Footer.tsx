@@ -30,7 +30,7 @@ const Footer = () => {
                     placeholder="Enter your email address..."
                   />
                   <button
-                    className="bg-green-600 rounded-2xl text-white hover:bg-white hover:text-green-500 w-36 p-2"
+                    className="bg-green-700 rounded-2xl text-white hover:bg-white hover:text-green-500 w-36 p-2"
                     type="submit"
                   >
                     SUBSCRIBE
@@ -94,7 +94,7 @@ const Footer = () => {
                   <h3 className="font-semibold text-gray-200">CONTACT US</h3>
                   <div>
                     <Link
-                      className="hover:underline hover:text-orange-500"
+                      className="hover:underline text-[#ffffff] hover:text-green-500"
                       to="tel:+123456789"
                     >
                       +123 456 789
@@ -102,7 +102,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <Link
-                      className="hover:underline hover:text-orange-500"
+                      className="hover:underline text-[#ffffff] hover:text-green-500"
                       to="mailto:example@email.com"
                     >
                       example@email.com

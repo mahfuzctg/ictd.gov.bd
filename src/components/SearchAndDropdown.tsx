@@ -27,11 +27,11 @@ const SearchAndDropdown: React.FC = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search..."
-            className="px-2 py-1 bg-[#ffffff] border border-green-600 text-sm rounded-l-md focus:outline-none focus:ring-1 focus:ring-green-600 flex-grow"
+            className="px-2 py-1 bg-[#ffffff] border border-green-700 text-sm rounded-l-md focus:outline-none focus:ring-1 focus:ring-green-600 flex-grow"
           />
           <button
             type="submit"
-            className="px-5 mx-1 py-1 text-sm bg-[#ffffff] border border-green-600 text-green-600 rounded-r-md hover:bg-green-600 hover:text-[#ffffff]"
+            className="px-5 mx-1 py-1 text-sm bg-[#ffffff] border border-green-700 text-green-600 rounded-r-md hover:bg-green-600 hover:text-[#ffffff]"
           >
             Search
           </button>
@@ -40,7 +40,7 @@ const SearchAndDropdown: React.FC = () => {
         {/* Title - Centered */}
         <div className="w-full text-center mb-4 md:mb-0">
           <span className="text-xl font-semibold text-gray-600">
-            <span className="text-green-600"> BANGLADESH</span> NATIONAL PORTAL
+            <span className="text-green-700"> BANGLADESH</span> NATIONAL PORTAL
           </span>
         </div>
 
@@ -49,7 +49,7 @@ const SearchAndDropdown: React.FC = () => {
           <select
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
-            className="px-4 py-1 border border-green-600 rounded-md focus:outline-none focus:ring-1 focus:ring-green-600 w-[100%]"
+            className="px-4 py-1 border border-green-700 rounded-md focus:outline-none focus:ring-1 focus:ring-green-600 w-[100%]"
           >
             <option value="Option 1">E-Governance</option>
             <option value="Option 2">Innovation</option>

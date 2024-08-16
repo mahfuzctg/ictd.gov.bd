@@ -10,7 +10,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ icon, title, textItems }) => {
   return (
-    <div className="bg-[#ffffff] p-6 rounded-lg max-w-sm flex flex-col h-[100%] border border-transparent transition-all duration-1000 ease-in-out hover:border-2 hover:border-green-600 hover:opacity-80">
+    <div className="bg-[#ffffff] p-6 rounded-lg max-w-sm flex flex-col h-[100%] border border-transparent transition-all duration-1000 ease-in-out hover:border-2 hover:border-green-700 hover:opacity-80">
       <div className="flex items-center pb-2">
         <img
           src={icon}
@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ icon, title, textItems }) => {
               href={item.link || "#"}
               className="mb-2 flex items-center text-gray-600"
             >
-              <HiExternalLink className="text-green-600 mr-1 w-4 h-4" />{" "}
+              <HiExternalLink className="text-green-700 mr-1 w-4 h-4" />{" "}
               {/* Fixed size icon */}
               <span className="block">{item.text}</span>
             </a>

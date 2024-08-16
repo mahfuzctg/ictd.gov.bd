@@ -24,9 +24,9 @@ const HomePage = () => {
           {/* First Div: Title and Text */}
           <div className="w-full md:w-1/2 flex flex-col uppercase justify-center items-start p-4">
             <h1 className="text-xl font-bold mb-4 text-gray-600">
-              <span className="text-green-600"> Welcome </span>to the{" "}
-              <span className="text-green-600">ICT</span> Division of{" "}
-              <span className="text-green-600">Bangladesh!</span>
+              <span className="text-green-700"> Welcome </span>to the{" "}
+              <span className="text-green-700">ICT</span> Division of{" "}
+              <span className="text-green-700">Bangladesh!</span>
             </h1>
             <p className="text-gray-700 text-sm ">
               We are dedicated to advancing technology and digital
@@ -65,7 +65,7 @@ const HomePage = () => {
                   currentImage === 2
                     ? "opacity-100 animate-bounce-smooth"
                     : "opacity-0"
-                } w-[600px] h-[200px] object-cover  bg-green-600`}
+                } w-[600px] h-[200px] object-cover  bg-green-800`}
               />
             </div>
           </div>
