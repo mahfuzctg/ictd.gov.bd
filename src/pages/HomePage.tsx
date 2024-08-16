@@ -84,7 +84,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <style jsx>{`
+      <style>{`
         @keyframes bounce-smooth {
           0%,
           20%,
