@@ -1,12 +1,29 @@
 import React from "react";
 import "../styles/video.css";
+
 const VideoSection: React.FC = () => {
   return (
-    <section className="p-5 overflow-hidden">
+    <section className="p-5">
+      {/* Container for Title and Audio Section */}
+      <div className="flex items-center justify-between my-4">
+        {/* Audio Section */}
+
+        <div className="text-center mx-auto">
+          <h1 className=" text-center font-bold text-orange-600 text-xl md:text-2xl flex-1">
+            Exclusive Videos And National Anthem
+          </h1>
+
+          <h2 className="text-lg  font-bold text-gray-800 mb-4"></h2>
+          <audio controls className="mx-auto">
+            <source
+              src="https://ictd.gov.bd/sites/default/files/files/ictd.portal.gov.bd/npfblock//bd_national_anthem.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+        </div>
+      </div>
+
       {/* Video Grid */}
-      <h1 className="text-center font-bold text-orange-600 py-8 md:text-xl">
-        Start Watching: Exclusive Video Content
-      </h1>
       <div className="scroll-container">
         <div className="scrolling-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Video 1 */}

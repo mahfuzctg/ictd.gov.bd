@@ -260,11 +260,6 @@ const rightSectionData = [
     title: "Md. Shamsul Arefin",
     text: "Secretary",
   },
-  {
-    icon: "https://via.placeholder.com/64",
-    title: "Right Section Card 3",
-    text: "This is the content of the third card in the right section.",
-  },
 ];
 
 const CardGrid: React.FC = () => {
