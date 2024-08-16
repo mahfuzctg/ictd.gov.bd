@@ -9,8 +9,7 @@ interface CardProps {
   textItems: string[];
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const SingleCard: React.FC<CardProps> = ({ icon, title, textItems }) => {
+const SingleCard: React.FC<CardProps> = ({ title, textItems }) => {
   return (
     <div
       className={`bg-[#ffffff] p-4 rounded-lg transform transition-transform duration-300 ease-in-out flex flex-col md:flex-row`}
