@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#2D5774] text-white p-2 shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full text-white p-2 shadow-md z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-1">
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
             alt="ICTD Logo"
             className="w-10 h-10 object-contain rounded-full"
           />
-          <span className="text-xl font-bold text-white">ICTD</span>
+          <span className="text-xl font-bold text-gray-700">ICTD</span>
         </Link>
 
         {/* Desktop menu links */}
@@ -42,13 +42,13 @@ const Navbar: React.FC = () => {
             <button
               className={`px-3 py-2 rounded-xl text-sm font-medium ${
                 isActive("/about-us")
-                  ? "bg-white text-orange-600"
-                  : "text-white hover:bg-orange-500"
+                  ? "text-orange-500"
+                  : "text-gray-700 hover:text-orange-500"
               }`}
             >
               About Us
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
               <Link
                 to="/about-us/team"
                 className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
@@ -69,13 +69,13 @@ const Navbar: React.FC = () => {
             <button
               className={`px-3 py-2 rounded-xl text-sm font-medium ${
                 isActive("/affiliated")
-                  ? "bg-white text-orange-600"
-                  : "text-white hover:bg-orange-500"
+                  ? "text-orange-500"
+                  : "text-gray-700 hover:text-orange-500"
               }`}
             >
               Affiliated Offices/Institutions
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
               <Link
                 to="/affiliated/office1"
                 className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
@@ -96,13 +96,13 @@ const Navbar: React.FC = () => {
             <button
               className={`px-3 py-2 rounded-xl text-sm font-medium ${
                 isActive("/projects")
-                  ? "bg-white text-orange-600"
-                  : "text-white hover:bg-orange-500"
+                  ? "text-orange-500"
+                  : "text-gray-700 hover:text-orange-500"
               }`}
             >
               Projects/Programme
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
               <Link
                 to="/projects/programme1"
                 className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
@@ -123,13 +123,13 @@ const Navbar: React.FC = () => {
             <button
               className={`px-3 py-2 rounded-xl text-sm font-medium ${
                 isActive("/gallery")
-                  ? "bg-white text-orange-600"
-                  : "text-white hover:bg-orange-500"
+                  ? "text-orange-500"
+                  : "text-gray-700 hover:text-orange-500"
               }`}
             >
               Gallery
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
               <Link
                 to="/gallery/photos"
                 className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
@@ -150,13 +150,13 @@ const Navbar: React.FC = () => {
             <button
               className={`px-3 py-2 rounded-xl text-sm font-medium ${
                 isActive("/acts-policy")
-                  ? "bg-white text-orange-600"
-                  : "text-white hover:bg-orange-500"
+                  ? "text-orange-500"
+                  : "text-gray-700 hover:text-orange-500"
               }`}
             >
               Acts/Policy
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
               <Link
                 to="/acts-policy/law1"
                 className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
@@ -177,13 +177,13 @@ const Navbar: React.FC = () => {
             <button
               className={`px-3 py-2 rounded-xl text-sm font-medium ${
                 isActive("/e-services")
-                  ? "bg-white text-orange-600"
-                  : "text-white hover:bg-orange-500"
+                  ? "text-orange-500"
+                  : "text-gray-700 hover:text-orange-500"
               }`}
             >
               E-Services
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-orange-600 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
               <Link
                 to="/e-services/service1"
                 className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
@@ -202,7 +202,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile menu button */}
         <div className="md:hidden flex items-center">
-          <button className="" onClick={toggleMenu}>
+          <button className="text-gray-700" onClick={toggleMenu}>
             {isMenuOpen ? "✕" : "☰"}
           </button>
         </div>
@@ -210,13 +210,13 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu links */}
       <div
-        className={`fixed top-0 left-0 h-full bg-orange-500 text-white bg-opacity-100 p-4 transition-transform ${
+        className={`fixed top-0 left-0 h-full bg-gray-800 text-white p-4 transition-transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         style={{ width: "60%" }}
       >
         <button
-          className="absolute top-4 right-4 text-white text-2xl"
+          className="absolute top-4 right-4 text-gray-700 text-2xl"
           onClick={closeMenu}
         >
           &times;
@@ -253,8 +253,8 @@ const Navbar: React.FC = () => {
                   openDropdown ===
                     item.label.toLowerCase().replace(/\s/g, "-") ||
                   isActive(item.links[0])
-                    ? "bg-white text-orange-600"
-                    : "text-white hover:bg-orange-500"
+                    ? "text-green-500"
+                    : "text-white hover:text-green-600"
                 }`}
                 onClick={() =>
                   toggleDropdown(item.label.toLowerCase().replace(/\s/g, "-"))
@@ -264,15 +264,15 @@ const Navbar: React.FC = () => {
               </button>
               {openDropdown ===
                 item.label.toLowerCase().replace(/\s/g, "-") && (
-                <div className="ml-4">
+                <div className="flex flex-col space-y-2 mt-2">
                   {item.links.map((link, idx) => (
                     <Link
                       key={idx}
                       to={link}
-                      className="block px-4 py-2 text-sm text-white hover:bg-orange-600"
+                      className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
                       onClick={closeMenu}
                     >
-                      {link.split("/").pop()?.replace("-", " ")}
+                      {link.split("/").pop()?.replace(/-/g, " ")}
                     </Link>
                   ))}
                 </div>

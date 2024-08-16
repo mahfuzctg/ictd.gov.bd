@@ -1,5 +1,5 @@
 import React from "react";
-import { MdSpellcheck } from "react-icons/md";
+import { HiExternalLink } from "react-icons/hi"; // Import HiExternalLink
 import "../styles/Card.css";
 
 interface CardProps {
@@ -10,14 +10,14 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ icon, title, textItems }) => {
   return (
-    <div className="bg-[#ffffff]   p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-sm duration-1000 ease-in-out max-w-sm flex flex-col h-[100%]">
+    <div className="bg-[#ffffff] p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-sm duration-1000 ease-in-out max-w-sm flex flex-col h-[100%]">
       <div className="flex items-center pb-2">
         <img
           src={icon}
           alt="Icon"
           className="w-16 h-16 rounded-full shadow-md"
         />
-        <h3 className="text-md font-semibold text-orange-500 ml-4 uppercase">
+        <h3 className="text-md font-semibold text-gray-600 ml-4 uppercase">
           {title}
         </h3>
       </div>
@@ -28,9 +28,10 @@ const Card: React.FC<CardProps> = ({ icon, title, textItems }) => {
             <a
               key={index}
               href={item.link || "#"}
-              className="mb-2 flex items-center text-gray-600 hover:text-orange-500 transition-colors duration-300"
+              className="mb-2 flex items-center text-gray-600 hover:text-green-600 transition-colors duration-300"
             >
-              <MdSpellcheck className="text-green-700 mr-2" /> {/* Read icon */}
+              <HiExternalLink className="text-green-600 mr-2" />{" "}
+              {/* External link icon */}
               <span className="block">{item.text}</span>
             </a>
           ))}

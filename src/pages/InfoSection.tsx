@@ -1,4 +1,4 @@
-import { MdSpellcheck } from "react-icons/md"; // Read icon from react-icons
+import { FaCheck } from "react-icons/fa"; // Import check mark icon from react-icons
 
 const InfoSection = () => {
   return (
@@ -20,9 +20,9 @@ const InfoSection = () => {
       {/* Second Column */}
       <div className="lg:w-[60%] flex flex-col space-y-6 lg:space-y-0 lg:gap-4">
         {/* First Card in Second Column */}
-        <div className="bg-white p-4 shadow-lg rounded-lg h-[50%]">
-          <div className="space-x-2 my-4 flex w-full justify-center">
-            {/* Four Images in Top */}
+        <div className="bg-white p-4 shadow-lg rounded-lg h-auto">
+          <div className="space-x-2 my-4 flex w-full justify-center flex-wrap">
+            {/* Images in Top */}
             <img
               src="https://i.postimg.cc/bJ3wDrK7/download.jpg"
               alt="Image 1"
@@ -40,72 +40,72 @@ const InfoSection = () => {
             />
           </div>
 
-          {/* Six List Texts with Read Icon */}
+          {/* List Texts with Check Mark Icon */}
           <ul className="list-disc pl-5 space-y-2">
             <h6 className="text-center font-bold">Internal E-Services</h6>
             <li className="flex items-center">
-              <MdSpellcheck className="mr-2 text-gray-600" />
+              <FaCheck className="mr-2 text-green-600" />
               Web Mail
             </li>
             <li className="flex items-center">
-              <MdSpellcheck className="mr-2 text-gray-600" />
+              <FaCheck className="mr-2 text-green-600" />
               Scholarships & ICT Grants
             </li>
             <li className="flex items-center">
-              <MdSpellcheck className="mr-2 text-gray-600" />
+              <FaCheck className="mr-2 text-green-600" />
               National Enterprise Architecture
             </li>
             <li className="flex items-center">
-              <MdSpellcheck className="mr-2 text-gray-600" />
+              <FaCheck className="mr-2 text-green-600" />
               CIRT
             </li>
             <li className="flex items-center">
-              <MdSpellcheck className="mr-2 text-gray-600" />
+              <FaCheck className="mr-2 text-green-600" />
               Online Recruitment System
             </li>
             <li className="flex items-center">
-              <MdSpellcheck className="mr-2 text-gray-600" />
+              <FaCheck className="mr-2 text-green-600" />
               One Stop Service (Bangladesh Hi-Tech Park)
             </li>
           </ul>
         </div>
 
         {/* Second and Third Cards */}
-        <div className="flex h-[50%] space-x-4">
+        <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
           {/* Second Card */}
-          <div className="w-1/2 bg-white p-4 shadow-lg rounded-lg flex flex-col justify-between">
+          <div className="w-full lg:w-1/2 bg-white p-4 shadow-lg rounded-lg flex flex-col justify-between">
             <h6 className="font-bold">Important Links</h6>
-            {/* Six List Texts */}
+            {/* List Texts */}
             <ul className="list-disc pl-5 space-y-2">
               <li className="flex items-center">
-                <MdSpellcheck className="mr-2 text-gray-600" />
-                List Item 1
+                <FaCheck className="mr-2 text-green-600" />
+                Office of the President
               </li>
               <li className="flex items-center">
-                <MdSpellcheck className="mr-2 text-gray-600" />
-                List Item 2
+                <FaCheck className="mr-2 text-green-600" />
+                Office of the Prime Minister
               </li>
               <li className="flex items-center">
-                <MdSpellcheck className="mr-2 text-gray-600" />
-                List Item 3
+                <FaCheck className="mr-2 text-green-600" />
+                Cabinet Division
               </li>
               <li className="flex items-center">
-                <MdSpellcheck className="mr-2 text-gray-600" />
-                List Item 4
+                <FaCheck className="mr-2 text-green-600" />
+                Bangladesh Employees Welfare Board
               </li>
               <li className="flex items-center">
-                <MdSpellcheck className="mr-2 text-gray-600" />
-                List Item 5
+                <FaCheck className="mr-2 text-green-600" />
+                National Skill Development Authority
               </li>
               <li className="flex items-center">
-                <MdSpellcheck className="mr-2 text-gray-600" />
-                List Item 6
+                <FaCheck className="mr-2 text-green-600" />
+                Primary Digital Content
               </li>
             </ul>
           </div>
 
           {/* Third Card */}
-          <div className="w-1/2 bg-white p-4 shadow-lg rounded-lg">
+          <div className="w-full lg:w-1/2 bg-white p-4 shadow-lg rounded-lg">
             <h6 className="font-bold">
               Website Visitors [Effective from 06.11.2019]
             </h6>

@@ -4,7 +4,7 @@ import Card from "./Card";
 // Existing card data (left section)
 const cardData = [
   {
-    icon: "https://i.postimg.cc/wMHjZGtH/bangladesh-independence-day-soldier-illustration-vector.jpg",
+    icon: "https://i.postimg.cc/3N0dDp2k/aboutus2.png",
     title: "About Us",
     textItems: [
       { text: "Vision & Mission", link: "https://example.com/vision" },
@@ -17,8 +17,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://i.postimg.cc/wMHjZGtH/bangladesh-independence-day-soldier-illustration-vector.jpg",
-    title: "Notice/Order/Circular",
+    icon: "https://i.postimg.cc/BvhTTTPp/0.png",
+    title: "Notices/Orders/Circulars",
     textItems: [
       {
         text: "Notification/Circular",
@@ -33,7 +33,7 @@ const cardData = [
     ],
   },
   {
-    icon: "https://i.postimg.cc/wMHjZGtH/bangladesh-independence-day-soldier-illustration-vector.jpg",
+    icon: "https://i.postimg.cc/50YC8ZV9/POLICY-PUBLICATION-New-1.png",
     title: "Policies & Publications",
     textItems: [
       { text: "Policy", link: "https://example.com/policy" },
@@ -49,8 +49,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://i.postimg.cc/wMHjZGtH/bangladesh-independence-day-soldier-illustration-vector.jpg",
-    title: "অফিস আদেশ (অবমুক্তি)",
+    icon: "https://i.postimg.cc/FsQLJWnm/5-0.png",
+    title: "Citizen E-Services",
     textItems: [
       {
         text: "Office order regarding the release of Mr. Mirza Murad Hasan Beg, Deputy Director.",
@@ -69,8 +69,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://i.postimg.cc/wMHjZGtH/bangladesh-independence-day-soldier-illustration-vector.jpg",
-    title: "বিজ্ঞান ও প্রযুক্তি বিভাগের প্রজ্ঞাপন",
+    icon: "https://i.postimg.cc/dtm47T6H/Citizen-Charter.png",
+    title: "Service Delivery Commitment (Citizens' Charter)",
     textItems: [
       {
         text: "Notification from the Ministry of Science and Technology.",
@@ -92,8 +92,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://i.postimg.cc/wMHjZGtH/bangladesh-independence-day-soldier-illustration-vector.jpg",
-    title: "চাকরি স্থায়ীকরণ ও বেতন বৃদ্ধি",
+    icon: "https://i.postimg.cc/QMVbnY3w/apa.png",
+    title: "Annual Performance Agreement",
     textItems: [
       {
         text: "Job regularization and salary increase information.",
@@ -112,8 +112,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://i.postimg.cc/wMHjZGtH/bangladesh-independence-day-soldier-illustration-vector.jpg",
-    title: "অফিস আদেশ (স্টাফ কর্তব্য)",
+    icon: "https://i.postimg.cc/HxytTJjt/nis-logo3.png",
+    title: "National Integrity Strategy",
     textItems: [
       {
         text: "Office order for staff duties and responsibilities.",
@@ -135,8 +135,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://via.placeholder.com/64",
-    title: "২০২৪-২০২৫ অর্থবছরের বাজেট",
+    icon: "https://i.postimg.cc/bY1RM27y/complain-1-1.png",
+    title: "Complaint Redress Mechanism",
     textItems: [
       {
         text: "Budget details for the fiscal year 2024-2025.",
@@ -158,8 +158,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://via.placeholder.com/64",
-    title: "নির্বাহী কমিটির সভার সিদ্ধান্ত",
+    icon: "https://i.postimg.cc/CLY4Vx0j/infocom.png",
+    title: "Right to Information",
     textItems: [
       {
         text: "Decisions from the executive committee meeting.",
@@ -184,8 +184,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://via.placeholder.com/64",
-    title: "অফিস আদেশ (নতুন কর্মসূচি)",
+    icon: "https://i.postimg.cc/k4KWkkh1/INNOVATION-1.png",
+    title: "Innovative Activities",
     textItems: [
       {
         text: "Office order regarding new programs and initiatives.",
@@ -207,8 +207,8 @@ const cardData = [
     ],
   },
   {
-    icon: "https://via.placeholder.com/64",
-    title: "অর্থনৈতিক পরিকল্পনা",
+    icon: "https://i.postimg.cc/kMNxwPSD/SPS-3.png",
+    title: "Service Simplification",
     textItems: [
       {
         text: "Economic planning and development strategies.",
@@ -227,11 +227,77 @@ const cardData = [
     ],
   },
   {
-    icon: "https://via.placeholder.com/64",
-    title: "অফিস আদেশ (কর্মী উন্নয়ন)",
+    icon: "https://i.postimg.cc/NfgRzC8D/Final-Logo-SDG.png",
+    title: "SDGs & Development Action Plan",
     textItems: [
       {
         text: "Office order for employee development and training.",
+        link: "https://example.com/employee-development",
+      },
+      {
+        text: "Training programs",
+        link: "https://example.com/training-programs",
+      },
+      { text: "Employee skills", link: "https://example.com/employee-skills" },
+      {
+        text: "Development initiatives",
+        link: "https://example.com/development-initiatives",
+      },
+      { text: "Career growth", link: "https://example.com/career-growth" },
+    ],
+  },
+  {
+    icon: "https://i.postimg.cc/NjFmgyzr/budget2-1.png",
+    title: "Budget & Projects",
+    textItems: [
+      {
+        text: "Budget details for the fiscal year 2024-2025.",
+        link: "https://example.com/budget",
+      },
+      { text: "Fiscal planning", link: "https://example.com/fiscal-planning" },
+      {
+        text: "Economic forecast",
+        link: "https://example.com/economic-forecast",
+      },
+      {
+        text: "Budget allocations",
+        link: "https://example.com/budget-allocations",
+      },
+      {
+        text: "Financial strategies",
+        link: "https://example.com/financial-strategies",
+      },
+    ],
+  },
+  {
+    icon: "https://i.postimg.cc/9fq976Vm/Capture-1.jpg",
+    title: "National ICT Policy 2018",
+    textItems: [
+      {
+        text: "Office order for new programs and initiatives.",
+        link: "https://example.com/new-programs",
+      },
+      {
+        text: "New programs",
+        link: "https://example.com/new-programs-details",
+      },
+      {
+        text: "Initiative details",
+        link: "https://example.com/initiative-details",
+      },
+      { text: "Program updates", link: "https://example.com/program-updates" },
+      {
+        text: "Office directives",
+        link: "https://example.com/office-directives",
+      },
+    ],
+  },
+  {
+    icon: "https://i.postimg.cc/wM9Rn3NM/1-0.png",
+    title: "Miscellaneous",
+    textItems: [
+      {
+        text: "Office order regarding employee development and training.",
         link: "https://example.com/employee-development",
       },
       {

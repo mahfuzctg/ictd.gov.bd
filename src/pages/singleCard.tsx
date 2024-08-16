@@ -1,4 +1,6 @@
 import React from "react";
+import { HiExternalLink } from "react-icons/hi";
+import { MdOutlineEditNotifications } from "react-icons/md";
 import "../styles/Card.css";
 
 interface CardProps {
@@ -15,32 +17,26 @@ const SingleCard: React.FC<CardProps> = ({ icon, title, textItems }) => {
     >
       {/* Icon on the left */}
       <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-end md:justify-start mb-4 md:mb-0">
-        <img
-          src={icon}
-          alt="Icon"
-          className="w-[80%] h-auto md:w-[70%] md:h-[70%]"
-        />
+        <MdOutlineEditNotifications className="w-[80%] h-auto md:w-[70%] md:h-[70%] text-green-600" />
       </div>
 
       {/* Content on the right */}
       <div className="w-full md:w-1/2 flex flex-col justify-between pl-0 md:pl-4">
         {/* Title */}
-        <h3 className="text-lg font-semibold text-center py-4 text-orange-500 uppercase">
+        <h3 className="text-lg font-semibold text-center py-4 text-gray-600 uppercase">
           {title}
         </h3>
 
         {/* Container for the list */}
         <div className="relative flex flex-col flex-grow">
-          {/* Vertical line */}
-          <div className="absolute top-0 left-0 h-[70%] w-[4px] bg-orange-500" />
-
           {/* List items */}
           <div className="pl-8 text-sm text-left flex flex-col flex-grow">
             {textItems.map((text, index) => (
               <div key={index} className="mb-2 flex items-start">
+                <HiExternalLink className="text-green-600 mr-2" />
                 <a
                   href={`#link-${index}`}
-                  className="block text-justify hover:text-orange-700 transition-colors duration-300 ease-in-out"
+                  className="block text-justify hover:text-green-700 transition-colors duration-300 ease-in-out"
                 >
                   {text}
                 </a>

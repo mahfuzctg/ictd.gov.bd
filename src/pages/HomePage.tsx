@@ -23,7 +23,7 @@ const HomePage = () => {
           </span> */}
         </div>
         {/* Scrolling Text */}
-        <div className="absolute bottom-0 w-full  bg-orange-600 text-[#ffffff] py-2">
+        <div className="absolute bottom-0 w-full   text-gray-700 py-2">
           <div className="overflow-hidden whitespace-nowrap">
             <p className="animate-scroll text-sm sm:text-base md:text-lg">
               Empowering Digital Bangladesh through Innovation and Technology...
