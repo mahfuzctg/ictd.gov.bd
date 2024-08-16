@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full text-white p-2 shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-green-600 text-white p-2 shadow-md z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-1">
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
             alt="ICTD Logo"
             className="w-10 h-10 object-contain rounded-full"
           />
-          <span className="text-xl font-bold text-gray-700">ICTD</span>
+          <span className="text-xl font-bold text-[#ffffff]">ICTD</span>
         </Link>
 
         {/* Desktop menu links */}
@@ -40,24 +40,22 @@ const Navbar: React.FC = () => {
           {/* Dropdown for About Us */}
           <div className="relative group">
             <button
-              className={`px-3 py-2 rounded-xl text-sm font-medium ${
-                isActive("/about-us")
-                  ? "text-orange-500"
-                  : "text-gray-700 hover:text-orange-500"
-              }`}
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
+                "/about-us"
+              )}`}
             >
               About Us
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/about-us/team"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Our Team
               </Link>
               <Link
                 to="/about-us/mission"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Our Mission
               </Link>
@@ -67,24 +65,22 @@ const Navbar: React.FC = () => {
           {/* Dropdown for Affiliated Offices/Institutions */}
           <div className="relative group">
             <button
-              className={`px-3 py-2 rounded-xl text-sm font-medium ${
-                isActive("/affiliated")
-                  ? "text-orange-500"
-                  : "text-gray-700 hover:text-orange-500"
-              }`}
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
+                "/affiliated"
+              )}`}
             >
               Affiliated Offices/Institutions
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/affiliated/office1"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Office 1
               </Link>
               <Link
                 to="/affiliated/office2"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Office 2
               </Link>
@@ -94,24 +90,22 @@ const Navbar: React.FC = () => {
           {/* Dropdown for Projects/Programme */}
           <div className="relative group">
             <button
-              className={`px-3 py-2 rounded-xl text-sm font-medium ${
-                isActive("/projects")
-                  ? "text-orange-500"
-                  : "text-gray-700 hover:text-orange-500"
-              }`}
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
+                "/projects"
+              )}`}
             >
               Projects/Programme
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/projects/programme1"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Programme 1
               </Link>
               <Link
                 to="/projects/programme2"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Programme 2
               </Link>
@@ -121,24 +115,22 @@ const Navbar: React.FC = () => {
           {/* Dropdown for Gallery */}
           <div className="relative group">
             <button
-              className={`px-3 py-2 rounded-xl text-sm font-medium ${
-                isActive("/gallery")
-                  ? "text-orange-500"
-                  : "text-gray-700 hover:text-orange-500"
-              }`}
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
+                "/gallery"
+              )}`}
             >
               Gallery
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/gallery/photos"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Photos
               </Link>
               <Link
                 to="/gallery/videos"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Videos
               </Link>
@@ -148,24 +140,22 @@ const Navbar: React.FC = () => {
           {/* Dropdown for Acts/Policy */}
           <div className="relative group">
             <button
-              className={`px-3 py-2 rounded-xl text-sm font-medium ${
-                isActive("/acts-policy")
-                  ? "text-orange-500"
-                  : "text-gray-700 hover:text-orange-500"
-              }`}
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
+                "/acts-policy"
+              )}`}
             >
               Acts/Policy
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/acts-policy/law1"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Law 1
               </Link>
               <Link
                 to="/acts-policy/law2"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Law 2
               </Link>
@@ -175,24 +165,22 @@ const Navbar: React.FC = () => {
           {/* Dropdown for E-Services */}
           <div className="relative group">
             <button
-              className={`px-3 py-2 rounded-xl text-sm font-medium ${
-                isActive("/e-services")
-                  ? "text-orange-500"
-                  : "text-gray-700 hover:text-orange-500"
-              }`}
+              className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
+                "/e-services"
+              )}`}
             >
               E-Services
             </button>
-            <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg rounded-lg">
+            <div className="absolute hidden group-hover:block bg-green-600 text-[#ffffff] shadow-lg rounded-lg">
               <Link
                 to="/e-services/service1"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Service 1
               </Link>
               <Link
                 to="/e-services/service2"
-                className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                className="block px-4 py-2 text-sm hover:text-red-600"
               >
                 Service 2
               </Link>
@@ -202,7 +190,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile menu button */}
         <div className="md:hidden flex items-center">
-          <button className="text-gray-700" onClick={toggleMenu}>
+          <button className="text-white" onClick={toggleMenu}>
             {isMenuOpen ? "✕" : "☰"}
           </button>
         </div>
@@ -210,13 +198,13 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu links */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-800 text-white p-4 transition-transform ${
+        className={`fixed top-0 left-0 h-full bg-green-600 text-white p-4 transition-transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         style={{ width: "60%" }}
       >
         <button
-          className="absolute top-4 right-4 text-gray-700 text-2xl"
+          className="absolute top-4 right-4 text-white text-2xl"
           onClick={closeMenu}
         >
           &times;
@@ -247,32 +235,25 @@ const Navbar: React.FC = () => {
               links: ["/e-services/service1", "/e-services/service2"],
             },
           ].map((item, index) => (
-            <div key={index}>
+            <div key={index} className="relative">
               <button
-                className={`px-3 py-2 rounded-xl text-sm font-medium ${
-                  openDropdown ===
-                    item.label.toLowerCase().replace(/\s/g, "-") ||
-                  isActive(item.links[0])
-                    ? "text-green-500"
-                    : "text-white hover:text-green-600"
+                className={`block text-xl font-semibold ${
+                  isActive(item.label) ? "text-red-500" : "text-white"
                 }`}
-                onClick={() =>
-                  toggleDropdown(item.label.toLowerCase().replace(/\s/g, "-"))
-                }
+                onClick={() => toggleDropdown(item.label)}
               >
                 {item.label}
               </button>
-              {openDropdown ===
-                item.label.toLowerCase().replace(/\s/g, "-") && (
-                <div className="flex flex-col space-y-2 mt-2">
-                  {item.links.map((link, idx) => (
+              {openDropdown === item.label && (
+                <div className="space-y-2 mt-2">
+                  {item.links.map((link, i) => (
                     <Link
-                      key={idx}
+                      key={i}
                       to={link}
-                      className="block px-4 py-2 text-sm hover:bg-orange-500 hover:text-white"
+                      className="block text-lg text-white hover:text-red-600"
                       onClick={closeMenu}
                     >
-                      {link.split("/").pop()?.replace(/-/g, " ")}
+                      {link.split("/").pop()}
                     </Link>
                   ))}
                 </div>

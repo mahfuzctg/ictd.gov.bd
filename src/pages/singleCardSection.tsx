@@ -28,7 +28,7 @@ const SingleCardSection: React.FC = () => {
         />
       </div>
       {/* Scrolling Text */}
-      <div className="w-full lg:w-[80%] h-[40px] bg-white opacity-80 text-orange-600 absolute bottom-0 flex items-center">
+      <div className="w-full lg:w-[80%] h-[40px] bg-white opacity-80 text-gray-700 absolute bottom-0 flex items-center">
         <div className="whitespace-nowrap overflow-hidden">
           <p className="animate-scroll text-sm md:text-lg px-4">
             {scrollingText}

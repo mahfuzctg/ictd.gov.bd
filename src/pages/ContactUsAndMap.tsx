@@ -21,7 +21,9 @@ const GoogleMap = () => {
 const ContactUs = () => {
   return (
     <div className="p-6 bg-gray-100 rounded-lg shadow-md">
-      <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact Us</h3>
+      <h3 className="text-lg font-bold uppercase text-center text-gray-700 mb-4">
+        Contact Us
+      </h3>
       <form className="space-y-4">
         <div>
           <label
@@ -67,7 +69,7 @@ const ContactUs = () => {
         </div>
         <button
           type="submit"
-          className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+          className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
         >
           Send Message
         </button>

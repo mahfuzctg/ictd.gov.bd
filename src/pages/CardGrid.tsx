@@ -347,14 +347,28 @@ const hotlineData = [
   { icon: "https://i.postimg.cc/tCkN8WMG/download.png" },
   { icon: "https://i.postimg.cc/YCSz705G/download.png" },
   { icon: "https://i.postimg.cc/52kq21JP/download.png" },
+
+  // second
+  { icon: "https://i.postimg.cc/3J5q3X1y/download.png" },
+  { icon: "https://i.postimg.cc/3J5q3X1y/download.png" },
+  { icon: "https://i.postimg.cc/sg30h3ts/download.png" },
+  { icon: "https://i.postimg.cc/8C0y9Msz/download.png" },
+  { icon: "https://i.postimg.cc/fy48Tsc4/download.png" },
+  { icon: "https://i.postimg.cc/mZMdpc4T/download.png" },
+  { icon: "https://i.postimg.cc/ncG3Z6M5/download.png" },
+  { icon: "https://i.postimg.cc/ncG3Z6M5/download.png" },
+  { icon: "https://i.postimg.cc/QdN0M0TM/download.png" },
+  { icon: "https://i.postimg.cc/mgdV1CYy/download.png" },
+  { icon: "https://i.postimg.cc/YShR608K/download.png" },
+
   // More hotline data...
 ];
 
 const CardGrid: React.FC = () => {
   return (
-    <div className="mx-auto  flex flex-col lg:flex-row">
+    <div className="mx-auto my-10 py-5   flex flex-col lg:flex-row">
       {/* Left section - Card grid (70% width) */}
-      <div className="w-full lg:w-[80%] h-[100%] mx-auto  grid grid-cols-1 md:grid-cols-3 text-sm gap-2">
+      <div className="w-full lg:w-[80%] h-[100%] mx-auto px-4  grid grid-cols-1 md:grid-cols-3 text-sm gap-2">
         {cardData.map((data, index) => (
           <Card
             key={index}
@@ -390,7 +404,7 @@ const CardGrid: React.FC = () => {
         </div>
 
         {/* Hotline Section */}
-        <div className="w-full h-[95%] overflow-hidden bg-[#faf5f9] p-2 rounded-lg">
+        <div className="w-full h-[85%] overflow-hidden bg-[#f5f5f5] p-2 rounded-lg">
           <h2 className="text-center font-bold text-gray-700 py-10 uppercase ">
             Emergency Hotline
           </h2>

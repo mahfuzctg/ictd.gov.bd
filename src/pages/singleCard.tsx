@@ -9,6 +9,7 @@ interface CardProps {
   textItems: string[];
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SingleCard: React.FC<CardProps> = ({ icon, title, textItems }) => {
   return (
     <div
@@ -17,7 +18,7 @@ const SingleCard: React.FC<CardProps> = ({ icon, title, textItems }) => {
     >
       {/* Icon on the left */}
       <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-end md:justify-start mb-4 md:mb-0">
-        <MdOutlineEditNotifications className="w-[80%] h-auto md:w-[70%] md:h-[70%] text-green-600" />
+        <MdOutlineEditNotifications className="w-[80%] h-auto md:w-[70%] md:h-[70%] text-gray-600" />
       </div>
 
       {/* Content on the right */}
