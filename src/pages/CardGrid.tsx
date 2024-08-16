@@ -324,11 +324,11 @@ const CardGrid: React.FC = () => {
         </div>
 
         {/* Hotline Section */}
-        <div className="w-full h-[95%] overflow-hidden">
-          <h2 className="text-center font-bold text-gray-800 py-4 text-xl">
+        <div className="w-full h-[95%] overflow-hidden bg-[#faf5f9] p-2 rounded-lg">
+          <h2 className="text-center font-bold text-gray-700 py-10 uppercase ">
             Emergency Hotline
           </h2>
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1  ">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
             {hotlineData.map((data, index) => (
               <div key={index} className="  rounded-lg  ">
                 <img

@@ -1,6 +1,6 @@
 import CardGrid from "./CardGrid";
 import ContactUsAndMap from "./ContactUsAndMap";
-import HotlineSection from "./HotlineSection";
+import InfoSection from "./InfoSection";
 import SingleCardSection from "./singleCardSection";
 import VideoSection from "./VideoSection";
 
@@ -38,8 +38,9 @@ const HomePage = () => {
       <>
         <CardGrid></CardGrid>
       </>
+      <InfoSection></InfoSection>
       <VideoSection></VideoSection>
-      <HotlineSection></HotlineSection>
+
       <ContactUsAndMap></ContactUsAndMap>
     </>
   );
