@@ -72,8 +72,8 @@ const HomePage = () => {
         </div>
 
         {/* Third Div: Scrolling Text */}
-        <div className="w-full text-gray-700 py-2 mt-4">
-          <div className="overflow-hidden whitespace-nowrap">
+        <div className="w-full text-gray-700 py-2 mt-4 overflow-hidden relative">
+          <div className="whitespace-nowrap absolute inset-0 flex items-center">
             <p className="animate-scroll text-sm sm:text-base md:text-lg">
               Empowering Digital Bangladesh through Innovation and Technology...
               Transforming Governance with Cutting-Edge ICT Solutions... ICTD
@@ -96,7 +96,7 @@ const HomePage = () => {
           40% {
             transform: translateY(-10px);
           }
-          68% {
+          60% {
             transform: translateY(-5px);
           }
         }
@@ -107,7 +107,7 @@ const HomePage = () => {
 
         @keyframes scroll-text {
           0% {
-            transform: translateX(100%);
+            transform: translateX(10%);
           }
           100% {
             transform: translateX(-100%);
@@ -117,7 +117,7 @@ const HomePage = () => {
         .animate-scroll {
           display: inline-block;
           white-space: nowrap;
-          animation: scroll-text 50s linear infinite;
+          animation: scroll-text 30s linear infinite;
         }
       `}</style>
 
