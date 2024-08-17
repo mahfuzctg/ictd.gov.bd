@@ -1,5 +1,4 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-
 import Footer from "./components/Footer";
 import Navbar from "./components/Header";
 import SearchAndDropdown from "./components/SearchAndDropdown";
@@ -9,21 +8,22 @@ import HomePage from "./pages/HomePage";
 const App = () => {
   return (
     <Router>
-      <>
+      <div className="flex flex-col min-h-screen">
         <Navbar />
 
-        <div className="mt-12">
+        <div className="mt-12 px-4 sm:px-6 lg:px-8">
           <SearchAndDropdown />
         </div>
-        <main>
+
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
-
             <Route path="/about" element={<AboutPage />} />
           </Routes>
         </main>
-        <Footer></Footer>
-      </>
+
+        <Footer />
+      </div>
     </Router>
   );
 };

@@ -14,13 +14,13 @@ const Footer = () => {
         }}
         className="mt-24 bg-top bg-cover bg-no-repeat"
       >
-        <div className="bg-black/85 h-full pt-8 px-8">
-          <div className="max-w-7xl mx-auto px-3 lg:px-0">
+        <div className="bg-black/85 h-full  pt-8 md:px-8">
+          <div className="md:max-w-7xl mx-auto px-3 lg:px-0">
             {/* Footer Top */}
             <div className="border-b py-5 border-gray-400 space-y-8 lg:flex items-center justify-between gap-10">
               {/* Subscribe */}
               <div className="space-y-2 flex-1">
-                <h3 className="font-semibold text-gray-200">
+                <h3 className=" text-center pb-3 font-semibold md:text-xl text-[#ffffff]">
                   SUBSCRIBE TO CONNECT WITH US
                 </h3>
                 <div className="flex w-full max-w-xl items-center space-x-2">
@@ -43,7 +43,7 @@ const Footer = () => {
 
               <div className="flex-1 flex flex-col md:flex-row justify-between gap-8 md:gap-10">
                 {/* Social */}
-                <div className="space-y-2">
+                <div className="space-y-2 mx-auto">
                   <h3 className="font-semibold text-gray-200">JOIN US ON:</h3>
                   <div className="flex items-center gap-4">
                     <Link to="https://web.facebook.com/">
@@ -90,7 +90,7 @@ const Footer = () => {
                 </div>
 
                 {/* Contact */}
-                <div className="space-y-2">
+                <div className="space-y-2 mx-auto">
                   <h3 className="font-semibold text-gray-200">CONTACT US</h3>
                   <div>
                     <Link
@@ -116,7 +116,11 @@ const Footer = () => {
             <div className="py-10 flex flex-col md:flex-row justify-between items-center">
               {/* Logo */}
               <Link to="/">
-                <img src={footerImage} className="h-20" alt="Footer Logo" />
+                <img
+                  src={footerImage}
+                  className="h-16 rounded-full"
+                  alt="Footer Logo"
+                />
               </Link>
 
               {/* Payment */}
