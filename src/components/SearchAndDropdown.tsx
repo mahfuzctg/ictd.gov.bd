@@ -15,8 +15,8 @@ const SearchAndDropdown: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#ffffff] p-4 shadow-md">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
+    <div className="bg-[#ffffff]  p-4 ">
+      <div className="mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
         {/* Main Search Bar */}
         <form
           onSubmit={handleSearch}
