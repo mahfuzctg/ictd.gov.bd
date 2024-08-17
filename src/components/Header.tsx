@@ -128,7 +128,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <div
-        className="w-full h-[70px] text-gray-800 flex items-center justify-between px-5 md:px-[70px]"
+        className="w-full h-[70px] text-gray-700 flex items-center justify-between px-5 md:px-[70px]"
         ref={menuRef}
       >
         {/* Logo */}
