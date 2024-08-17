@@ -9,7 +9,7 @@ const VideoSection: React.FC = () => {
         {/* Audio Section */}
 
         <div className="text-center mx-auto">
-          <h1 className=" text-center font-bold text-orange-600 text-xl md:text-2xl flex-1">
+          <h1 className=" text-center font-bold text-gray-700 text-xl md:text-2xl flex-1">
             Exclusive Videos And National Anthem
           </h1>
 

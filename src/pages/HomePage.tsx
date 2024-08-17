@@ -22,19 +22,6 @@ const HomePage = () => {
       <section className="w-full mx-auto text-center p-4 md:p-12">
         <div className="flex flex-col md:flex-row md:space-x-4">
           {/* First Div: Title and Text */}
-          <div className="w-full md:w-1/2 flex flex-col uppercase justify-center items-start p-4">
-            <h1 className="text-xl font-bold mb-4 text-gray-600">
-              <span className="text-green-700"> Welcome </span>to the{" "}
-              <span className="text-green-700">ICT</span> Division of{" "}
-              <span className="text-green-700">Bangladesh!</span>
-            </h1>
-            <p className="text-gray-700 text-sm">
-              We are dedicated to advancing technology and digital
-              transformation across the nation. Explore our initiatives and
-              projects that aim to enhance governance and public services
-              through innovation.
-            </p>
-          </div>
 
           {/* Second Div: Animated Images */}
           <div className="w-full md:w-1/2 h-[300px] flex justify-center items-center">
@@ -68,6 +55,19 @@ const HomePage = () => {
                 } w-[600px] h-[200px] object-cover bg-green-800`}
               />
             </div>
+          </div>
+          <div className="w-full md:w-1/2 flex flex-col uppercase justify-center p-4">
+            <h1 className="text-xl text-justify font-bold mb-4 text-gray-600">
+              <span className="text-green-700"> Welcome </span>to the{" "}
+              <span className="text-green-700">ICT</span> Division of{" "}
+              <span className="text-green-700">Bangladesh!</span>
+            </h1>
+            <p className="text-gray-700 text-sm text-center">
+              We are dedicated to advancing technology and digital
+              transformation across the nation. Explore our initiatives and
+              projects that aim to enhance governance and public services
+              through innovation.
+            </p>
           </div>
         </div>
 

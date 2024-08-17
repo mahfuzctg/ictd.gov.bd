@@ -1,376 +1,227 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { AiOutlineCloseSquare } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa6";
+import { IoMenu } from "react-icons/io5";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { RiFacebookCircleLine } from "react-icons/ri";
+import { TiSocialTwitterCircular } from "react-icons/ti";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/images/banner/ictd-logo.png";
 
-const Navbar: React.FC = () => {
+const menuLinks = [
+  {
+    title: "About us",
+    links: [
+      { href: "/", label: "History & Activities" },
+      { href: "/", label: "Vision & Mission" },
+      { href: "/", label: "Honorable Adviser" },
+      { href: "/", label: "List of Ex-Ministers" },
+      { href: "/", label: "Secretary" },
+      { href: "/", label: "List of Ex-Secretaries" },
+      { href: "/", label: "Organogram" },
+      { href: "/", label: "Allocation of Business" },
+      { href: "/", label: "Principal Function" },
+      { href: "/", label: "Work Distribution" },
+      { href: "/", label: "Member Nomination" },
+    ],
+  },
+  {
+    title: "Institutions",
+    links: [{ href: "/", label: "List of Offices/Institutions" }],
+  },
+  {
+    title: "Gallery",
+    links: [
+      { href: "/", label: "Photo Gallery" },
+      { href: "/", label: "Video Gallery" },
+    ],
+  },
+  {
+    title: "Projects",
+    links: [
+      { href: "/", label: "Ongoing Projects" },
+      { href: "/", label: "Completed Projects" },
+    ],
+  },
+  {
+    title: "Contact & Comment",
+    links: [
+      { href: "/", label: "Office Address" },
+      { href: "/", label: "Your Comment" },
+    ],
+  },
+  {
+    title: "Policy",
+    links: [
+      { href: "/", label: "Acts" },
+      { href: "/", label: "Policy" },
+    ],
+  },
+  {
+    title: "e-Services",
+    links: [
+      { href: "/", label: "Smart Dashboard" },
+      { href: "/", label: "Freelancer ID" },
+      { href: "/", label: "Online Recruitment" },
+    ],
+  },
+];
+
+const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null);
+  const [isEnglish, setIsEnglish] = useState(true);
   const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(""); // Track which dropdown is open for mobile
+  const menuRef = useRef<HTMLDivElement>(null);
 
-  const isActive = (path: string) => location.pathname === path;
+  useEffect(() => {
+    // Close the submenu when the route changes
+    setOpenMenuIndex(null);
+  }, [location]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    // Close the submenu when clicking outside the menu
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpenMenuIndex(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    setOpenDropdown(""); // Close all dropdowns when the menu closes
-  };
-
-  const toggleDropdown = (dropdown: string) => {
-    setOpenDropdown(openDropdown === dropdown ? "" : dropdown); // Toggle specific dropdown
+  const handleMenuClick = (index: number) => {
+    setOpenMenuIndex(openMenuIndex === index ? null : index);
   };
 
   return (
-    <div>
-      <nav className="fixed top-0 left-0 w-full bg-green-800 text-white p-2 z-50">
-        <div className="container mx-auto flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-1">
-            <img
-              src={logo}
-              alt="ICTD Logo"
-              className="w-10 h-10 object-contain rounded-full"
-            />
-            <span className="text-xl font-bold text-[#ffffff]">ICTD</span>
-          </Link>
-
-          {/* Desktop menu links */}
-          <div className="hidden md:flex space-x-4">
-            {/* Dropdown for About Us */}
-            <div className="relative group">
-              <button
-                className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
-                  "/about-us"
-                )}`}
-              >
-                About Us
-              </button>
-              <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
-                <div className="flex">
-                  <div className="w-full text-center">
-                    <span className="">Department Introduction</span>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-2 py-2 text-sm hover:text-red-600"
-                    >
-                      History and Functions
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-2 py-2 text-sm hover:text-red-600"
-                    >
-                      Vision and Mission
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-2 py-2 text-sm hover:text-red-600"
-                    >
-                      Honorable Advisor
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className="flex mx-2 px-2 py-2 text-sm hover:text-red-600"
-                    >
-                      List of Former Ministers
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className=" flex mx-2 px-2 py-2 text-sm hover:text-red-600"
-                    >
-                      Secretary
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-2 py-2 text-sm hover:text-red-600"
-                    >
-                      List of Former Secretaries
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-2 py-2 text-sm hover:text-red-600"
-                    >
-                      Organizational Structure
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-4 py-2 text-sm hover:text-red-600"
-                    >
-                      Allocation of Business
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-2 py-2 text-sm hover:text-red-600"
-                    >
-                      Main Functions
-                    </Link>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-4 py-2 text-sm hover:text-red-600"
-                    >
-                      Distribution of Work
-                    </Link>
-                  </div>
-                  {/* Second about items */}
-                  <div>
-                    <Link
-                      to="/about-us/mission"
-                      className="block px-4 py-2 text-sm hover:text-red-600"
-                    >
-                      Our Mission
-                    </Link>
-                    <Link
-                      to="/about-us/mission"
-                      className="block px-4 py-2 text-sm hover:text-red-600"
-                    >
-                      Our Mission
-                    </Link>
-                    <Link
-                      to="/about-us/mission"
-                      className="block px-4 py-2 text-sm hover:text-red-600"
-                    >
-                      Our Mission
-                    </Link>
-                    <Link
-                      to="/about-us/mission"
-                      className="block px-4 py-2 text-sm hover:text-red-600"
-                    >
-                      Our Mission
-                    </Link>
-                  </div>
-                  <div>
-                    <Link
-                      to="/about-us/team"
-                      className="block px-4 py-2 text-sm hover:text-red-600"
-                    >
-                      Our Team
-                    </Link>
-                  </div>
-                  <div>
-                    <Link
-                      to="/about-us/mission"
-                      className="block px-4 py-2 text-sm hover:text-red-600"
-                    >
-                      Our Mission
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Dropdown for Affiliated Offices/Institutions */}
-            <div className="relative group">
-              <button
-                className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
-                  "/affiliated"
-                )}`}
-              >
-                Affiliated Offices/Institutions
-              </button>
-              <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
-                <Link
-                  to="/affiliated/office1"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Office 1
-                </Link>
-                <Link
-                  to="/affiliated/office2"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Office 2
-                </Link>
-              </div>
-            </div>
-
-            {/* Dropdown for Projects/Programme */}
-            <div className="relative group">
-              <button
-                className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
-                  "/projects"
-                )}`}
-              >
-                Projects/Programme
-              </button>
-              <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
-                <Link
-                  to="/projects/programme1"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Programme 1
-                </Link>
-                <Link
-                  to="/projects/programme2"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Programme 2
-                </Link>
-              </div>
-            </div>
-
-            {/* Dropdown for Gallery */}
-            <div className="relative group">
-              <button
-                className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
-                  "/gallery"
-                )}`}
-              >
-                Gallery
-              </button>
-              <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
-                <Link
-                  to="/gallery/photos"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Photos
-                </Link>
-                <Link
-                  to="/gallery/videos"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Videos
-                </Link>
-              </div>
-            </div>
-
-            {/* Dropdown for Acts/Policy */}
-            <div className="relative group">
-              <button
-                className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
-                  "/acts-policy"
-                )}`}
-              >
-                Acts/Policy
-              </button>
-              <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
-                <Link
-                  to="/acts-policy/law1"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Law 1
-                </Link>
-                <Link
-                  to="/acts-policy/law2"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Law 2
-                </Link>
-              </div>
-            </div>
-
-            {/* Dropdown for E-Services */}
-            <div className="relative group">
-              <button
-                className={`px-3 py-2 rounded-xl text-sm font-medium ${isActive(
-                  "/e-services"
-                )}`}
-              >
-                E-Services
-              </button>
-              <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
-                <Link
-                  to="/e-services/service1"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Service 1
-                </Link>
-                <Link
-                  to="/e-services/service2"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Service 2
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button className="text-white" onClick={toggleMenu}>
-              {isMenuOpen ? "✕" : "☰"}
-            </button>
-          </div>
+    <>
+      {/* Top Bar */}
+      <div className="h-[30px] flex items-center justify-between bg-green-800 text-white px-5">
+        <div className="flex items-center gap-x-3">
+          <RiFacebookCircleLine className="text-[20px] hover:text-gray-300" />
+          <TiSocialTwitterCircular className="text-[23px] hover:text-gray-300" />
+          <FaYoutube className="text-[20px] hover:text-gray-300" />
+          <FaInstagram className="text-[20px] hover:text-gray-300" />
+          <FaLinkedinIn className="text-[20px] hover:text-gray-300" />
         </div>
-
-        {/* Mobile menu links */}
-        <div
-          className={`fixed top-0 left-0 h-full bg-green-800 text-white p-4 transition-transform ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-          style={{ width: "80%" }} // Updated width to 80% for smaller screens
-        >
-          <button
-            className="absolute top-4 right-4 text-white text-2xl"
-            onClick={closeMenu}
+        <div className="flex items-center gap-x-4">
+          <div
+            onClick={() => setDarkMode(!darkMode)}
+            className="cursor-pointer"
           >
-            &times;
-          </button>
-
-          <div className="flex flex-col space-y-4 mt-12">
-            {/* Mobile Dropdowns for each section */}
-            {[
-              {
-                label: "About Us",
-                links: [
-                  "/about-us/team",
-                  "/about-us/mission",
-                  "/about-us/team",
-                  "/about-us/mission",
-                  "/about-us/team",
-                  "/about-us/mission",
-                ],
-              },
-              {
-                label: "Affiliated Offices/Institutions",
-                links: ["/affiliated/office1", "/affiliated/office2"],
-              },
-              {
-                label: "Projects/Programme",
-                links: ["/projects/programme1", "/projects/programme2"],
-              },
-              {
-                label: "Gallery",
-                links: ["/gallery/photos", "/gallery/videos"],
-              },
-              {
-                label: "Acts/Policy",
-                links: ["/acts-policy/law1", "/acts-policy/law2"],
-              },
-              {
-                label: "E-Services",
-                links: ["/e-services/service1", "/e-services/service2"],
-              },
-            ].map((item, index) => (
-              <div key={index} className="relative">
-                <button
-                  className={`block text-xl font-semibold ${
-                    isActive(item.label) ? "text-red-500" : "text-white"
-                  }`}
-                  onClick={() => toggleDropdown(item.label)}
-                >
-                  {item.label}
-                </button>
-                {openDropdown === item.label && (
-                  <div className="space-y-2 mt-2">
-                    {item.links.map((link, i) => (
-                      <Link
-                        key={i}
-                        to={link}
-                        className="block text-lg text-white hover:text-red-600"
-                        onClick={closeMenu}
-                      >
-                        {link.split("/").pop()}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+            {darkMode ? (
+              <MdOutlineLightMode className="text-[20px] hover:text-gray-300" />
+            ) : (
+              <MdOutlineDarkMode className="text-[20px] hover:text-gray-300" />
+            )}
+          </div>
+          <div
+            onClick={() => setIsEnglish(!isEnglish)}
+            className="cursor-pointer hover:text-gray-400"
+          >
+            {isEnglish ? "বাংলা" : "English"}
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      {/* Main Navbar */}
+      <div
+        className="w-full h-[70px] text-gray-800 flex items-center justify-between px-5 md:px-[70px]"
+        ref={menuRef}
+      >
+        {/* Logo */}
+        <Link to="/" className="flex items-center">
+          <img
+            src="https://i.postimg.cc/nrf8NcJs/ict-division-bangladesh-3.jpg"
+            alt="ICTD Logo"
+            className="h-[50px] w-[50px] mr-3 rounded-full"
+          />
+        </Link>
+
+        {/* Menu for Large Screens */}
+        <ul className="hidden lg:flex gap-x-6">
+          {menuLinks.map((menu, index) => (
+            <li key={index} className="relative">
+              <button
+                onClick={() => handleMenuClick(index)}
+                className="font-semibold hover:text-green-800"
+              >
+                {menu.title}
+              </button>
+              {openMenuIndex === index && (
+                <div className="absolute top-full left-0 mt-2 w-[200px] bg-white shadow-lg rounded-md transition-all">
+                  <ul>
+                    {menu.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <Link
+                          to={link.href}
+                          className="block py-2 px-4 hover:bg-gray-200 text-gray-700"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        {/* Menu Button for Small Screens */}
+        <div className="lg:hidden block">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? (
+              <AiOutlineCloseSquare className="text-2xl text-green-800" />
+            ) : (
+              <IoMenu className="text-2xl text-green-800" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Drawer for Small Screens */}
+      {menuOpen && (
+        <div className="lg:hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-50">
+          <div className="w-[250px] bg-white h-full p-5 shadow-lg">
+            <button
+              className="text-gray-800 font-semibold text-lg mb-5"
+              onClick={() => setMenuOpen(false)}
+            >
+              X
+            </button>
+            <ul className="space-y-4">
+              {menuLinks.map((menu, index) => (
+                <li key={index}>
+                  <button
+                    className="font-semibold"
+                    onClick={() => handleMenuClick(index)}
+                  >
+                    {menu.title}
+                  </button>
+                  {openMenuIndex === index && (
+                    <ul className="pl-4 space-y-2">
+                      {menu.links.map((link, linkIndex) => (
+                        <li key={linkIndex}>
+                          <Link
+                            to={link.href}
+                            className="block py-1 hover:text-green-800"
+                          >
+                            {link.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

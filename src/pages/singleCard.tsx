@@ -38,7 +38,7 @@ const SingleCard: React.FC<CardProps> = ({ title, textItems }) => {
                 <HiExternalLink className="text-green-700 mr-1 w-5 h-4" />
                 <a
                   href={`#link-${index}`}
-                  className="block text-lg  hover:text-green-700 transition-colors duration-300 ease-in-out"
+                  className="block text-md  hover:text-green-700 transition-colors duration-300 ease-in-out"
                 >
                   {text}
                 </a>

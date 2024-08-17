@@ -18,7 +18,7 @@ const cardData = [
   },
   {
     icon: "https://i.postimg.cc/BvhTTTPp/0.png",
-    title: "Notices/Orders/Circulars",
+    title: "Notices/Circulars",
     textItems: [
       {
         text: "Notification/Circular",
@@ -330,7 +330,7 @@ const rightSectionData = [
 
 // Hotline section data
 const hotlineData = [
-  { icon: "https://i.postimg.cc/Qx1R74Ck/333.png" },
+  // { icon: "https://i.postimg.cc/Qx1R74Ck/333.png" },
   { icon: "https://i.postimg.cc/3xZVSkgk/999.png" },
   { icon: "https://i.postimg.cc/3J5q3X1y/download.png" },
   { icon: "https://i.postimg.cc/3J5q3X1y/download.png" },
@@ -404,8 +404,8 @@ const CardGrid: React.FC = () => {
         </div>
 
         {/* Hotline Section */}
-        <div className="w-full h-[85%] overflow-hidden bg-[#f5f5f5] p-2 rounded-lg">
-          <h2 className="text-center font-bold text-gray-700 py-10 uppercase ">
+        <div className="w-full h-[85%] overflow-hidden bg-[#ffffff] shadow-md p-2 rounded-lg">
+          <h2 className="text-center font-bold text-lg text-green-700 py-10 uppercase ">
             Emergency Hotline
           </h2>
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">

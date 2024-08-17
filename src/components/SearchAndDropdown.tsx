@@ -15,7 +15,7 @@ const SearchAndDropdown: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#ffffff]  p-4 ">
+    <div className="bg-[#ffffff] ">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
         {/* Main Search Bar */}
         <form
@@ -37,10 +37,10 @@ const SearchAndDropdown: React.FC = () => {
           </button>
         </form>
 
-        {/* Title - Centered */}
-        <div className="text-center md:w-1/2">
-          <span className="text-xl font-semibold text-gray-600">
-            <span className="text-green-700">BANGLADESH</span> NATIONAL PORTAL
+        {/* Title - Centered on large devices, top on small devices */}
+        <div className="text-center w-full pb-3 md:w-1/2 order-first md:order-none">
+          <span className="text-md md:text-xl font-bold text-gray-600 ">
+            <span className="text-green-700 ">BANGLADESH</span> NATIONAL PORTAL
           </span>
         </div>
 

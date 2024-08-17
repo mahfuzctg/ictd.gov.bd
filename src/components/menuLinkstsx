@@ -1,0 +1,116 @@
+const menuLinks = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About Us",
+    submenu: [
+      {
+        title: "Division",
+        links: [
+          { href: "/", label: "History & Activities" },
+          { href: "/", label: "Vision & Mission" },
+          { href: "/", label: "Honorable Adviser" },
+          { href: "/", label: "List of Ex-Ministers" },
+          { href: "/", label: "Secretary" },
+          { href: "/", label: "List of Ex-Secretaries" },
+          { href: "/", label: "Organogram" },
+          { href: "/", label: "Allocation of Business" },
+          { href: "/", label: "Principal Function" },
+          { href: "/", label: "Work Distribution" },
+          { href: "/", label: "Member Nomination and Officers" },
+        ],
+      },
+      {
+        title: "Men Power",
+        links: [
+          { href: "/", label: "Information Officer" },
+          { href: "/", label: "GRS and Appellate Officer" },
+          { href: "/", label: "Focal Point Officers" },
+          { href: "/", label: "Citizen Charter" },
+          { href: "/", label: "List of Citizen e-Services" },
+        ],
+      },
+      {
+        title: "Services",
+        links: [
+          { href: "/", label: "List of Citizen e-Services" },
+          {
+            href: "/",
+            label: "Committees chaired by Honorable PM & Honorable Minister",
+          },
+        ],
+      },
+      {
+        title: "Ministry/Division",
+        links: [{ href: "/", label: "Regarding Ministry/Division" }],
+      },
+    ],
+  },
+  {
+    title: "Affiliated Offices/Institutions",
+    href: "/affiliated-offices",
+  },
+  {
+    title: "Projects/Programme",
+    href: "/projects-programme",
+  },
+  {
+    title: "Gallery",
+    href: "/gallery",
+  },
+  {
+    title: "Acts/Policy",
+    href: "/acts-policy",
+  },
+  {
+    title: "E-Service",
+    href: "/e-service",
+  },
+  {
+    title: "Others",
+    submenu: [
+      {
+        title: "Division",
+        links: [
+          { href: "/", label: "History & Activities" },
+          { href: "/", label: "Vision & Mission" },
+          { href: "/", label: "Honorable Adviser" },
+          { href: "/", label: "List of Ex-Ministers" },
+          { href: "/", label: "Secretary" },
+          { href: "/", label: "List of Ex-Secretaries" },
+          { href: "/", label: "Organogram" },
+          { href: "/", label: "Allocation of Business" },
+          { href: "/", label: "Principal Function" },
+          { href: "/", label: "Work Distribution" },
+          { href: "/", label: "Member Nomination and Officers" },
+        ],
+      },
+      {
+        title: "Men Power",
+        links: [
+          { href: "/", label: "Information Officer" },
+          { href: "/", label: "GRS and Appellate Officer" },
+          { href: "/", label: "Focal Point Officers" },
+          { href: "/", label: "Citizen Charter" },
+          { href: "/", label: "List of Citizen e-Services" },
+        ],
+      },
+      {
+        title: "Services",
+        links: [
+          { href: "/", label: "List of Citizen e-Services" },
+          {
+            href: "/",
+            label: "Committees chaired by Honorable PM & Honorable Minister",
+          },
+        ],
+      },
+      {
+        title: "Ministry/Division",
+        links: [{ href: "/", label: "Regarding Ministry/Division" }],
+      },
+    ],
+  },
+];

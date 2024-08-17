@@ -42,7 +42,9 @@ const InfoSection = () => {
 
           {/* List Texts with Check Mark Icon */}
           <ul className="list-disc pl-5 space-y-2">
-            <h6 className="text-center font-bold">Internal E-Services</h6>
+            <h6 className="text-center font-bold text-gray-700">
+              Internal E-Services
+            </h6>
             <li className="flex items-center">
               <FaRegCheckCircle className="mr-2 text-green-600" />
               Web Mail
@@ -74,7 +76,9 @@ const InfoSection = () => {
         <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
           {/* Second Card */}
           <div className="w-full lg:w-1/2 bg-white p-4 shadow-lg rounded-lg flex flex-col justify-between">
-            <h6 className="font-bold">Important Links</h6>
+            <h6 className="font-bold text-gray-700 text-center">
+              Important Links
+            </h6>
             {/* List Texts */}
             <ul className="list-disc pl-5 space-y-2">
               <li className="flex items-center">
@@ -106,7 +110,7 @@ const InfoSection = () => {
 
           {/* Third Card */}
           <div className="w-full lg:w-1/2 bg-white p-4 shadow-lg rounded-lg">
-            <h6 className="font-bold">
+            <h6 className="font-bold text-gray-700 text-center">
               Website Visitors [Effective from 06.11.2019]
             </h6>
             <img
