@@ -32,13 +32,13 @@ const SingleCard: React.FC<CardProps> = ({ title, textItems }) => {
         {/* Container for the list */}
         <div className="relative flex flex-col flex-grow">
           {/* List items */}
-          <div className="pl-8 text-sm text-left flex flex-col flex-grow">
+          <div className="">
             {textItems.map((text, index) => (
-              <div key={index} className="mb-2 flex items-start">
-                <HiExternalLink className="text-green-700 mr-2" />
+              <div key={index} className="mb-2 text-justify flex items-start">
+                <HiExternalLink className="text-green-700 mr-1 w-5 h-4" />
                 <a
                   href={`#link-${index}`}
-                  className="block text-justify hover:text-green-700 transition-colors duration-300 ease-in-out"
+                  className="block text-lg  hover:text-green-700 transition-colors duration-300 ease-in-out"
                 >
                   {text}
                 </a>
