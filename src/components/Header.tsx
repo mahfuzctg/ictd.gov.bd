@@ -48,18 +48,114 @@ const Navbar: React.FC = () => {
                 About Us
               </button>
               <div className="absolute hidden group-hover:block bg-green-800 text-[#ffffff] shadow-lg rounded-lg">
-                <Link
-                  to="/about-us/team"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Our Team
-                </Link>
-                <Link
-                  to="/about-us/mission"
-                  className="block px-4 py-2 text-sm hover:text-red-600"
-                >
-                  Our Mission
-                </Link>
+                <div className="flex">
+                  <div className="w-full text-center">
+                    <span className="">Department Introduction</span>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-2 py-2 text-sm hover:text-red-600"
+                    >
+                      History and Functions
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-2 py-2 text-sm hover:text-red-600"
+                    >
+                      Vision and Mission
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-2 py-2 text-sm hover:text-red-600"
+                    >
+                      Honorable Advisor
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className="flex mx-2 px-2 py-2 text-sm hover:text-red-600"
+                    >
+                      List of Former Ministers
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className=" flex mx-2 px-2 py-2 text-sm hover:text-red-600"
+                    >
+                      Secretary
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-2 py-2 text-sm hover:text-red-600"
+                    >
+                      List of Former Secretaries
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-2 py-2 text-sm hover:text-red-600"
+                    >
+                      Organizational Structure
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-4 py-2 text-sm hover:text-red-600"
+                    >
+                      Allocation of Business
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-2 py-2 text-sm hover:text-red-600"
+                    >
+                      Main Functions
+                    </Link>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-4 py-2 text-sm hover:text-red-600"
+                    >
+                      Distribution of Work
+                    </Link>
+                  </div>
+                  {/* Second about items */}
+                  <div>
+                    <Link
+                      to="/about-us/mission"
+                      className="block px-4 py-2 text-sm hover:text-red-600"
+                    >
+                      Our Mission
+                    </Link>
+                    <Link
+                      to="/about-us/mission"
+                      className="block px-4 py-2 text-sm hover:text-red-600"
+                    >
+                      Our Mission
+                    </Link>
+                    <Link
+                      to="/about-us/mission"
+                      className="block px-4 py-2 text-sm hover:text-red-600"
+                    >
+                      Our Mission
+                    </Link>
+                    <Link
+                      to="/about-us/mission"
+                      className="block px-4 py-2 text-sm hover:text-red-600"
+                    >
+                      Our Mission
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      to="/about-us/team"
+                      className="block px-4 py-2 text-sm hover:text-red-600"
+                    >
+                      Our Team
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      to="/about-us/mission"
+                      className="block px-4 py-2 text-sm hover:text-red-600"
+                    >
+                      Our Mission
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -216,7 +312,14 @@ const Navbar: React.FC = () => {
             {[
               {
                 label: "About Us",
-                links: ["/about-us/team", "/about-us/mission"],
+                links: [
+                  "/about-us/team",
+                  "/about-us/mission",
+                  "/about-us/team",
+                  "/about-us/mission",
+                  "/about-us/team",
+                  "/about-us/mission",
+                ],
               },
               {
                 label: "Affiliated Offices/Institutions",

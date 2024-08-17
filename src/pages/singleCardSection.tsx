@@ -21,11 +21,7 @@ const SingleCardSection: React.FC = () => {
   return (
     <section className="flex flex-col items-center p-5 space-y-4 relative">
       <div className="w-full lg:w-[80%]">
-        <SingleCard
-          icon={cardData.icon}
-          title={cardData.title}
-          textItems={cardData.textItems}
-        />
+        <SingleCard title={cardData.title} textItems={cardData.textItems} />
       </div>
       {/* Scrolling Text */}
       <div className="w-full lg:w-[80%] h-[40px] bg-white opacity-80 text-gray-700 absolute bottom-0 flex items-center">

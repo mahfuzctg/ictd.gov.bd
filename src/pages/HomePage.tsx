@@ -19,7 +19,7 @@ const HomePage = () => {
   return (
     <div className="">
       {/* New Section */}
-      <section className="w-full mx-auto text-center  p-4 md:p-12">
+      <section className="w-full mx-auto text-center p-4 md:p-12">
         <div className="flex flex-col md:flex-row md:space-x-4">
           {/* First Div: Title and Text */}
           <div className="w-full md:w-1/2 flex flex-col uppercase justify-center items-start p-4">
@@ -28,7 +28,7 @@ const HomePage = () => {
               <span className="text-green-700">ICT</span> Division of{" "}
               <span className="text-green-700">Bangladesh!</span>
             </h1>
-            <p className="text-gray-700 text-sm ">
+            <p className="text-gray-700 text-sm">
               We are dedicated to advancing technology and digital
               transformation across the nation. Explore our initiatives and
               projects that aim to enhance governance and public services
@@ -47,7 +47,7 @@ const HomePage = () => {
                   currentImage === 0
                     ? "opacity-100 animate-bounce-smooth"
                     : "opacity-0"
-                } w-[600px] h-[200px] object-cover  bg-gray-600`}
+                } w-[600px] h-[200px] object-cover bg-gray-600`}
               />
               <img
                 src="https://i.postimg.cc/3RgzKjrK/bangladesh-map-flag-national-day-banner-design-flag-theme-art-web-background-vector-illustration-580.avif" // Replace with the URL of the digital trace image
@@ -56,7 +56,7 @@ const HomePage = () => {
                   currentImage === 1
                     ? "opacity-100 animate-bounce-smooth"
                     : "opacity-0"
-                }  w-[600px] h-[200px] object-cover  bg-red-600`}
+                } w-[600px] h-[200px] object-cover bg-red-600`}
               />
               <img
                 src="https://i.postimg.cc/ydbsZy40/1451660587.jpg" // Replace with the URL of the flag circle image
@@ -65,7 +65,7 @@ const HomePage = () => {
                   currentImage === 2
                     ? "opacity-100 animate-bounce-smooth"
                     : "opacity-0"
-                } w-[600px] h-[200px] object-cover  bg-green-800`}
+                } w-[600px] h-[200px] object-cover bg-green-800`}
               />
             </div>
           </div>
@@ -96,7 +96,7 @@ const HomePage = () => {
           40% {
             transform: translateY(-10px);
           }
-          60% {
+          68% {
             transform: translateY(-5px);
           }
         }
@@ -104,7 +104,23 @@ const HomePage = () => {
         .animate-bounce-smooth {
           animation: bounce-smooth 2s infinite;
         }
+
+        @keyframes scroll-text {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .animate-scroll {
+          display: inline-block;
+          white-space: nowrap;
+          animation: scroll-text 50s linear infinite;
+        }
       `}</style>
+
       <SingleCardSection />
       <CardGrid />
       <InfoSection />
